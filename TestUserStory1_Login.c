@@ -16,7 +16,7 @@ TestUserStory1_Login()
 
 	// Check point 
 	web_reg_find("Search=Body",
-		"Text=Welcome to Resene Techspec",
+		"Text=Welcome to Techspec",
 		LAST);
 	lr_start_transaction("TestUserStory1_01_LauchUrl");
 
@@ -57,7 +57,7 @@ TestUserStory1_Login()
 
 	//checkpoint
 	web_reg_find("Search=Body",
-		"Text=Log in to your Resene TechSpec Account",
+		"Text=Log in to your Account",
 		LAST);
 	//<input name="__RequestVerificationToken" type="hidden" value="{RequestVerificationToken}" /> 
 	
