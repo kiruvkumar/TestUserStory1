@@ -1,0 +1,13 @@
+[t17]
+FileName1=t17.htm
+URL1=https://www.resenetechspec.com/Account/Login
+Total=2
+RequestHeaderFile=t17_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t17_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_17.xml
+FileName2=t17_spinworking.gif
+URL2=https://www.resenetechspec.com/Content/images/spinworking.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,11 @@
+[t22]
+FileName1=t22.html
+URL1=https://www.resenetechspec.com/Home/SetGAClientID?id=2001375033.1560567924
+Total=1
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t22_ResponseHeader.txt
+ContentType=
+SnapshotXmlFile=snapshot_22.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

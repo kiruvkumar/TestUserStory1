@@ -1,0 +1,13 @@
+[t13]
+FileName1=t13.htm
+URL1=https://www.resenetechspec.com/
+Total=2
+RequestHeaderFile=t13_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t13_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_13.xml
+FileName2=t13_client_model_v5_ext_variation_0.html
+URL2=https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_ext_variation_0.pb
+[ProtocolInfo]
+ProtocolId=QTWeb

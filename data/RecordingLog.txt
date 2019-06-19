@@ -1,0 +1,760 @@
+[API Trapper      ( 718:1df4)] Recording in 64-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[API Trapper      (1fe4:2314)] Recording in 64-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[API Trapper      (12f0:1434)] Recording in 64-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[API Trapper      (1940:262c)] Recording in 64-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[Network Analyzer (1940:2ab0)] ------------------------------------------------------------------------------------------
+[Network Analyzer (1940:2ab0)] Load Network Traffic Analyzers:
+[Network Analyzer (1940:2ab0)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (1940:2ab0)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer (1940:2ab0)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (1940:2ab0)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer (1940:2ab0)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer (1940:2ab0)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (1940:2ab0)]     Analyzer Module: local_server (value=)
+[Network Analyzer (1940:2ab0)] ------------------------------------------------------------------------------------------
+[Network Analyzer (1940:1290)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 216.58.196.131:443   (Service=)  (Sid=  1)  PROXIED!
+[Network Analyzer (1940: d58)]   (Sid:  1) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer (1940: a5c)]   (Sid:  2) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 74.125.24.188:5228   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 216.58.199.67:443   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 216.58.199.67:443   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 216.58.200.109:443   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer (1940: a5c)]   (Sid:  2) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940: d58)]   (Sid:  1) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940: ad0)]   (Sid:  3) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940: ad0)]   (Sid:  3) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:296c)]   (Sid:  4) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:296c)]   (Sid:  4) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2744)]   (Sid:  5) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2744)]   (Sid:  5) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /chrome-variations/seed?osname=win&channel=stable&milestone=74"   
+[Network Analyzer (1940:1290)]   (Sid:  1) Client -> Server @ : 379 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /"   
+[Network Analyzer (1940:1290)]   (Sid:  2) Client -> Server @ : 428 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  3) Client -> Server @ : 192 bytes (SSL)
+[Web Request      (1940:1290)] "GET /safebrowsing/csd/client_model_v5_variation_0.pb"   
+[Network Analyzer (1940:1290)]   (Sid:  4) Client -> Server @ : 277 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /safebrowsing/csd/client_model_v5_ext_variation_0.pb"   
+[Network Analyzer (1940:1290)]   (Sid:  5) Client -> Server @ : 281 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 10265 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  3) Server -> Client : 1 bytes (SSL)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  3) Server -> Client : 90 bytes (SSL)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  3) Server -> Client : 105 bytes (SSL)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  1) Server -> Client : 212 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940: ef4)]   (Sid:  6) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 21 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 21 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940: ef4)]   (Sid:  6) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 959 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 959 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  4) Server -> Client : 1245 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  5) Server -> Client : 1245 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Content/Bootstrap/css/bootstrap.css"   
+[Network Analyzer (1940:1290)]   (Sid:  2) Client -> Server @ : 427 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 247 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1d30)]   (Sid:  7) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 11002 bytes (SSL) (Service=HTTP)
+[API Trapper      (2154:2194)] Recording in 64-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.19.196.151:443   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.19.196.151:443   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.19.196.151:443   (Service=)  (Sid= 10)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2980)]   (Sid:  8) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.19.196.151:443   (Service=)  (Sid= 11)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2364)]   (Sid:  9) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 13)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer (1940:2454)]   (Sid: 10) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer (1940: 6d8)]   (Sid: 11) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1718)]   (Sid: 12) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:1a38)]   (Sid: 13) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:2368)]   (Sid: 14) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:171c)]   (Sid: 15) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.20.43.93:443   (Service=)  (Sid= 16)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.20.43.93:443   (Service=)  (Sid= 17)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.20.43.93:443   (Service=)  (Sid= 18)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:25a0)]   (Sid: 16) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.20.43.93:443   (Service=)  (Sid= 19)  PROXIED!
+[Network Analyzer (1940:1d30)]   (Sid:  7) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.20.43.93:443   (Service=)  (Sid= 20)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940: 8b4)]   (Sid: 17) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 104.20.43.93:443   (Service=)  (Sid= 21)  PROXIED!
+[Network Analyzer (1940:1718)]   (Sid: 12) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1a38)]   (Sid: 13) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2368)]   (Sid: 14) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:171c)]   (Sid: 15) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2980)]   (Sid:  8) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2364)]   (Sid:  9) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2454)]   (Sid: 10) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940: 6d8)]   (Sid: 11) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /Content/Bootstrap/css/bootstrap-toggle.css"   
+[Network Analyzer (1940:1290)]   (Sid:  7) Client -> Server @ : 434 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Content/site.css?ver=1"   
+[Network Analyzer (1940:1290)]   (Sid: 12) Client -> Server @ : 414 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/jquery-3.3.1.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 13) Client -> Server @ : 404 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:2668)]   (Sid: 18) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /Scripts/jquery.unobtrusive-ajax.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 415 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/jquery.validate.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 15) Client -> Server @ : 407 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:25a0)]   (Sid: 16) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940: 8b4)]   (Sid: 17) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"   
+[Network Analyzer (1940:1290)]   (Sid:  8) Client -> Server @ : 391 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 2064 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /ajax/libs/codemirror/5.25.0/codemirror.min.css"   
+[Network Analyzer (1940:1290)]   (Sid:  9) Client -> Server @ : 384 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /ajax/libs/froala-editor/2.6.0/css/froala_editor.pkgd.min.css"   
+[Network Analyzer (1940:1290)]   (Sid: 10) Client -> Server @ : 398 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  8) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /ajax/libs/froala-editor/2.6.0/css/froala_style.min.css"   
+[Network Analyzer (1940:1290)]   (Sid: 11) Client -> Server @ : 392 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 3914 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  8) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  9) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 10) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 11) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 7138 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /1.10.16/css/jquery.dataTables.min.css"   
+[Network Analyzer (1940:1290)]   (Sid: 17) Client -> Server @ : 373 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  8) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  9) Server -> Client : 715 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 10) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 11) Server -> Client : 492 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 1989 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  8) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  9) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 10) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 11) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  8) Server -> Client : 909 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 10) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 261 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  8) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 10) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2668)]   (Sid: 18) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /Content/form.css"   
+[Network Analyzer (1940:1290)]   (Sid:  2) Client -> Server @ : 408 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 10) Server -> Client : 1046 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 5007 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 214 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1998)]   (Sid: 19) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid: 10) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /autofill/2.2.2/css/autoFill.dataTables.css"   
+[Network Analyzer (1940:1290)]   (Sid: 16) Client -> Server @ : 378 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 3926 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /engine1/style.css?ver=1"   
+[Network Analyzer (1940:1290)]   (Sid:  7) Client -> Server @ : 415 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /buttons/1.5.1/css/buttons.dataTables.min.css"   
+[Network Analyzer (1940:1290)]   (Sid: 18) Client -> Server @ : 380 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/jquery.validate.unobtrusive.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 419 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /rowreorder/1.2.3/css/rowReorder.dataTables.min.css"   
+[Network Analyzer (1940:1290)]   (Sid: 17) Client -> Server @ : 386 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 16) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 5468 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 6024 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 16) Server -> Client : 176 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 1055 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 18) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 18) Server -> Client : 1250 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/custom.js"   
+[Network Analyzer (1940:1290)]   (Sid: 12) Client -> Server @ : 394 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/tinymce/tinymce.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 15) Client -> Server @ : 407 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1998)]   (Sid: 19) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /Scripts/jQueryFileDownload.js"   
+[Network Analyzer (1940:1290)]   (Sid: 13) Client -> Server @ : 406 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/jquery.js"   
+[Network Analyzer (1940:1290)]   (Sid:  2) Client -> Server @ : 394 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /1.10.16/js/jquery.dataTables.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 19) Client -> Server @ : 356 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1494)]   (Sid: 20) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /autofill/2.2.2/js/dataTables.autoFill.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 16) Client -> Server @ : 365 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /buttons/1.5.1/js/dataTables.buttons.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 17) Client -> Server @ : 363 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 495 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /buttons/1.5.1/js/buttons.colVis.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 18) Client -> Server @ : 359 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/jquery-ui.min.js"   
+[Network Analyzer (1940:1290)]   (Sid:  7) Client -> Server @ : 401 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/moment.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 398 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 1968 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 16) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 16) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 18) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 16) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 18) Server -> Client : 466 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 261 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 16) Server -> Client : 598 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1494)]   (Sid: 20) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2494)]   (Sid: 21) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 17) Server -> Client : 1236 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 15702 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 262 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 261 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 7014 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 7908 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 15474 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 19) Server -> Client : 1322 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Content/Bootstrap/js/bootstrap-tooltip.js"   
+[Network Analyzer (1940:1290)]   (Sid: 12) Client -> Server @ : 418 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:2494)]   (Sid: 21) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /rowreorder/1.2.3/js/dataTables.rowReorder.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 20) Client -> Server @ : 369 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Content/Bootstrap/js/bootstrap.js"   
+[Network Analyzer (1940:1290)]   (Sid: 13) Client -> Server @ : 410 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Content/Bootstrap/js/bootstrap-toggle.min.js"   
+[Network Analyzer (1940:1290)]   (Sid:  2) Client -> Server @ : 421 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/jquery.truncate.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 407 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/knockout-3.4.2.js"   
+[Network Analyzer (1940:1290)]   (Sid:  7) Client -> Server @ : 402 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 8104 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/knockout.mapping-latest.js"   
+[Network Analyzer (1940:1290)]   (Sid: 15) Client -> Server @ : 411 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 4388 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 2539 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 20) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/jquery-ui-touch-punch.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 12) Client -> Server @ : 413 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 3425 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 20) Server -> Client : 1369 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 1561 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 20) Server -> Client : 770 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 11463 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 13432 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/froala-editor/js/froala_editor.pkgd.min.js"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 427 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Content/Bootstrap/js/application.js"   
+[Network Analyzer (1940:1290)]   (Sid: 15) Client -> Server @ : 412 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Content/images/ReseneHeader_rgb_small.jpg"   
+[Network Analyzer (1940:1290)]   (Sid: 13) Client -> Server @ : 454 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /Content/images/working.gif"   
+[Network Analyzer (1940:1290)]   (Sid:  7) Client -> Server @ : 439 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 11764 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 12746 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 5059 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 262 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/knockout.mapping-latest.js"   
+[Network Analyzer (1940:1290)]   (Sid: 12) Client -> Server @ : 411 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 3425 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 11624 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/TechSpecMainScripts.js?ver=37"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 414 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /engine1/wowslider.js"   
+[Network Analyzer (1940:1290)]   (Sid: 12) Client -> Server @ : 397 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 12) Server -> Client : 15659 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /engine1/script.js"   
+[Network Analyzer (1940:1290)]   (Sid: 15) Client -> Server @ : 394 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/move.js"   
+[Network Analyzer (1940:1290)]   (Sid: 13) Client -> Server @ : 392 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 9870 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /data1/images/homepage1.jpg"   
+[Network Analyzer (1940:1290)]   (Sid:  7) Client -> Server @ : 439 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /data1/images/homepage2.jpg"   
+[Network Analyzer (1940:1290)]   (Sid:  2) Client -> Server @ : 439 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /data1/images/homepage3.jpg"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 439 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 15) Server -> Client : 3774 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 13) Server -> Client : 11875 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 13095 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 216.58.200.106:443   (Service=)  (Sid= 22)  PROXIED!
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 8532 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 1905 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1994)]   (Sid: 22) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid:  6) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid:  1) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid:  5) Connection Terminated (by Client)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 40.83.104.208:443   (Service=)  (Sid= 23)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 40.83.104.208:80   (Service=)  (Sid= 24)  PROXIED!
+[Web Request      (1940:1290)] "GET /Content/images/gradient_background_bg.jpg"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 476 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /siteimages/094%20-%20stained%20old%20pine%20deck%20-%20A.jpg"   
+[Network Analyzer (1940:1290)]   (Sid: 24) Client -> Server @ : 390 bytes (Service=HTTP)
+[Network Analyzer (1940:1994)]   (Sid: 22) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 165 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /css?family=EB+Garamond&subset=latin,cyrillic,latin-ext"   
+[Network Analyzer (1940:1290)]   (Sid: 22) Client -> Server @ : 392 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:1290)]   (Sid: 24) Server -> Client : 1412 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 22) Server -> Client : 1057 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 24) Server -> Client : 12708 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 22) Server -> Client : 11 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 40.83.104.208:80   (Service=)  (Sid= 25)  PROXIED!
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:1480)]   (Sid: 23) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (1940:1290)]   (Sid: 24) Server -> Client : 1412 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 24) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 24) Server -> Client : 480 bytes  (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 40.83.104.208:80   (Service=)  (Sid= 26)  PROXIED!
+[Web Request      (1940:1290)] "GET /data1/images/homepage4.jpg"   
+[Network Analyzer (1940:1290)]   (Sid: 14) Client -> Server @ : 439 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /siteimages/095%20-%20stained%20old%20pine%20deck%20-%20B.jpg"   
+[Network Analyzer (1940:1290)]   (Sid: 25) Client -> Server @ : 390 bytes (Service=HTTP)
+[Web Request      (1940:1290)] "GET /siteimages/096%20-%20stained%20old%20pine%20deck%20-%20C.jpg"   
+[Network Analyzer (1940:1290)]   (Sid: 26) Client -> Server @ : 390 bytes (Service=HTTP)
+[Web Request      (1940:1290)] "GET /content/images/spacer.gif"   
+[Network Analyzer (1940:1290)]   (Sid:  2) Client -> Server @ : 438 bytes (SSL)(Service=HTTP)
+[Web Request      (1940:1290)] "GET /content/images/resene_logo_footer.gif"   
+[Network Analyzer (1940:1290)]   (Sid:  7) Client -> Server @ : 450 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1480)]   (Sid: 23) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  2) Server -> Client : 288 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:1290)]   (Sid: 14) Server -> Client : 12365 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 3245 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 216.58.199.46:443   (Service=)  (Sid= 27)  PROXIED!
+[Web Request      (1940:1290)] "GET /siteimages/TS0003_E_TJ_woodsman_closeup_of_63LARGE.jpg"   
+[Network Analyzer (1940:1290)]   (Sid: 23) Client -> Server @ : 430 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 1412 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 12708 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 26) Server -> Client : 14120 bytes  (Service=HTTP)
+[Web Request      (1940:1290)] "GET /engine1/pause.png"   
+[Network Analyzer (1940:1290)]   (Sid:  7) Client -> Server @ : 453 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid:  7) Server -> Client : 4921 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 24) Connection Terminated (by Client)
+[Network Analyzer (1940:2ac4)]   (Sid: 27) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 2824 bytes  (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 9032 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 26) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 26) Server -> Client : 11856 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 26) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 26) Server -> Client : 5272 bytes  (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 216.58.196.142:443   (Service=)  (Sid= 28)  PROXIED!
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 25) Server -> Client : 808 bytes  (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ac4)]   (Sid: 27) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940: 4e4)]   (Sid: 28) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid: 23) Server -> Client : 9296 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /analytics.js"   
+[Network Analyzer (1940:1290)]   (Sid: 27) Client -> Server @ : 339 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940: 4e4)]   (Sid: 28) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /tbproxy/af/query?q=Chc2LjEuMTcxNS4xNDQyL2VuIChHR0xMKRMZ6hAhndAIRb4jLTWF3YUkFA=="   
+[Network Analyzer (1940:1290)]   (Sid: 28) Client -> Server @ : 403 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 28) Server -> Client : 360 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 1383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 104 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 29)  PROXIED!
+[Web Request      (1940:1290)] "GET /r/collect?v=1&_v=j76&a=1486493267&t=pageview&_s=1&dl=https%3A%2F%2Fwww.resenetechspec.com%2F&ul=en-us&de=UTF-8&dt=Welcome%20to%20Resene%20Techspec%20-%20Resene%20TechSpec%20System&sd=24-bit&sr=1280x800&vp=1263x689&je=0&_u=IEBAAAAB~&jid=836495306&gjid=1893732914&cid=2001375033.1560567924&tid=UA-49289843-1&_gid=101686158.1560567924&_r=1&z=1556351407"   
+[Network Analyzer (1940:1290)]   (Sid: 27) Client -> Server @ : 712 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:249c)]   (Sid: 29) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:249c)]   (Sid: 29) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "POST /Home/SetGAClientID?id=2001375033.1560567924"   
+[Network Analyzer (1940:1290)]   (Sid: 29) Client -> Server @ : 588 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 27) Server -> Client : 424 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 29) Server -> Client : 204 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 18) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 16) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 17) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 21) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 19) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 20) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid:  8) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 11) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 10) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 22) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 12) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 15) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 14) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid:  2) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 30)  PROXIED!
+[Web Request      (1940:1290)] "GET /favicon.ico"   
+[Network Analyzer (1940:1290)]   (Sid: 29) Client -> Server @ : 498 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 29) Server -> Client : 12592 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940: 2e0)]   (Sid: 30) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 172.217.167.78:443   (Service=)  (Sid= 31)  PROXIED!
+[Network Analyzer (1940: 2e0)]   (Sid: 30) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2428)]   (Sid: 31) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:2428)]   (Sid: 31) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /service/update2/crx?os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=chromecrx&prodchannel=&prodversion=74.0.3729.169&lang=en-US&acceptformat=crx2,crx3&x=id%3Daapocclcgogkmnckokdopfmhonfmgoek%26v%3D0.10%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Daohghmighlieiainnegkcijnfilokake%26v%3D0.10%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dapdfllckaahabafndbhieahigkjlhalf%26v%3D14.2%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dblpcfgokakmgnkcojhhkbfbldkacnbeo%26v%3D4.2.8%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dfelcaaldnbdncclmgdcncolpebgiejap%26v%3D1.2%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dghbmnnjooekpmoecnnnilnnbdlolhkhi%26v%3D1.7%26installedby%3Dexternal%26uc%26brand%3DCHBF&x=id%3Dnmmhkkegccagdldgiimedpiccmgmieda%26v%3D1.0.0.4%26installedby%3Dother%26uc%26brand%3DCHBF&x=id%3Dpjkljhegncpnkpknbcohdijeoejaedia%26v%3D8.2%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dpkedcjkdefgpdelpbcmbmeomcjbeemfm%26v%3D7419.311.0.1%26installedby%3Dother%26uc%26brand%3DCHBF"   
+[Network Analyzer (1940:1290)]   (Sid: 31) Client -> Server @ : 1689 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 31) Server -> Client : 687 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 31) Server -> Client : 513 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 31) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[User action                 ] StartTransactionEvent click login  [Network Analyzer (1940:1290)]   (Sid: 26) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 25) Connection Terminated (by Client)
+[API Trapper      (28e4: 258)] Recording in 64-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 32)  PROXIED!
+[Network Analyzer (1940: c40)]   (Sid: 32) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940: c40)]   (Sid: 32) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "GET /Account/Login"   
+[Network Analyzer (1940:1290)]   (Sid: 32) Client -> Server @ : 609 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 32) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 32) Server -> Client : 10129 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/knockout.mapping-latest.js"   
+[Network Analyzer (1940:1290)]   (Sid: 32) Client -> Server @ : 635 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:1290)]   (Sid: 32) Server -> Client : 3425 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 33)  PROXIED!
+[Web Request      (1940:1290)] "GET /Content/images/spinworking.gif"   
+[Network Analyzer (1940:1290)]   (Sid: 32) Client -> Server @ : 667 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 32) Server -> Client : 3373 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:13dc)]   (Sid: 33) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:13dc)]   (Sid: 33) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1290)]   (Sid: 31) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 28) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 23) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 27) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 30) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 29) Connection Terminated (by Client)
+[User action                 ] EndTransactionEvent click login  [Network Analyzer (1940:1290)]   (Sid: 32) Connection Terminated (by Client)
+[Network Analyzer (1940:1290)]   (Sid: 33) Connection Terminated (by Client)
+[User action                 ] StartTransactionEvent credentials n signin [Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 216.58.199.78:443   (Service=)  (Sid= 34)  PROXIED!
+[Network Analyzer (1940:1ba0)]   (Sid: 34) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (1940:1ba0)]   (Sid: 34) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "POST /safebrowsing/clientreport/login?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw"   
+[Network Analyzer (1940:1290)]   (Sid: 34) Client -> Server @ : 876 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 35)  PROXIED!
+[Network Analyzer (1940:1290)]   (Sid: 34) Server -> Client : 723 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 34) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1720)]   (Sid: 35) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:1720)]   (Sid: 35) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "POST /Account/Login"   
+[Network Analyzer (1940:1290)]   (Sid: 35) Client -> Server @ : 1090 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 35) Server -> Client : 646 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /"   
+[Network Analyzer (1940:1290)]   (Sid: 35) Client -> Server @ : 1008 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 35) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 35) Server -> Client : 11116 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/knockout.mapping-latest.js"   
+[Network Analyzer (1940:1290)]   (Sid: 35) Client -> Server @ : 858 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 35) Server -> Client : 3425 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "POST /Home/SetGAClientID?id=2001375033.1560567924"   
+[Network Analyzer (1940:1290)]   (Sid: 35) Client -> Server @ : 961 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 35) Server -> Client : 204 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 34) Connection Terminated (by Client)
+[User action                 ] EndTransactionEvent credentials n signin [Network Analyzer (1940:1290)]   (Sid: 35) Connection Terminated (by Client)
+[User action                 ] StartTransactionEvent logoff [Network Analyzer (1940:2ab0)] Address lookup for DESKTOP-1GL57Q7 = 192.168.1.70
+[Network Analyzer (1940:2ab0)] Request Connection: Remote Server @ 23.101.222.150:443   (Service=)  (Sid= 36)  PROXIED!
+[Network Analyzer (1940:1da0)]   (Sid: 36) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1940:1da0)]   (Sid: 36) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (1940:1290)] "POST /Account/LogOff"   
+[Network Analyzer (1940:1290)]   (Sid: 36) Client -> Server @ : 1276 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 36) Server -> Client : 473 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /"   
+[Network Analyzer (1940:1290)]   (Sid: 36) Client -> Server @ : 759 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 36) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 36) Server -> Client : 10191 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "GET /Scripts/knockout.mapping-latest.js"   
+[Network Analyzer (1940:1290)]   (Sid: 36) Client -> Server @ : 622 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 36) Server -> Client : 3425 bytes (SSL) (Service=HTTP)
+[Web Request      (1940:1290)] "POST /Home/SetGAClientID?id=2001375033.1560567924"   
+[Network Analyzer (1940:1290)]   (Sid: 36) Client -> Server @ : 725 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1940:1290)]   (Sid: 36) Server -> Client : 204 bytes (SSL) (Service=HTTP)
+[User action                 ] EndTransactionEvent logoff 

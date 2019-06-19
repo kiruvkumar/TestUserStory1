@@ -1,0 +1,9 @@
+POST /safebrowsing/clientreport/login?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw HTTP/1.1
+Host: sb-ssl.google.com
+Connection: keep-alive
+Content-Length: 318
+Content-Type: application/octet-stream
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Cookie: NID=182=dJwE4tn8_DFlMg0nOAKkupvGnqgRzw2EcZZKOqoL30n5zVPDjZVv9GWpcPXWWsLhtbsXr5Gl2pYzQ9141xKaqSgYhEDC-hqDln-EI706aysSdtN-UR3oSePqwBwm9whJWPpQPe0L7sdMJ4G48AUozUZ6BxBpqoWIOep4eBJtabA
+

@@ -1,0 +1,13 @@
+POST /Home/SetGAClientID?id=151038827.1560567726 HTTP/1.1
+Host: www.resenetechspec.com
+Connection: keep-alive
+Content-Length: 0
+Accept: */*
+Origin: https://www.resenetechspec.com
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+Referer: https://www.resenetechspec.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: ASP.NET_SessionId=uvfftoiauhe1btcbnt4tya5r; _ga=GA1.2.151038827.1560567726; _gid=GA1.2.1680992500.1560567726; _gat=1
+

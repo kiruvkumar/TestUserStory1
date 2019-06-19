@@ -1,0 +1,1019 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "x-requested-with",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-updater",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-interactivity",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-appid",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-api-key",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "upgrade-insecure-requests",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "origin",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "if-none-match",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "cache-control",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "a-im",
+      "IncludeInScript": true
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": true,
+      "type": "text/xml"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/proto"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/javascript"
+    },
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/css"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/x-icon"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/png"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/jpeg"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/gif"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/octet-stream"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/javascript"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "IsWinInetMode": false,
+    "MaxUsedConnections": 31,
+    "RecordedBrowser": "Chrome",
+    "RecordingDate": "Jun-15-2019",
+    "RecordingDuration": 93391,
+    "RecordingMode": "N/A",
+    "RecordingTimeStamp": 1560567693,
+    "RecordingType": "Browser",
+    "TotalBytesReceived": 3020789,
+    "TotalBytesSent": 38904,
+    "TotalRequests": 79,
+    "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"
+  },
+  "HostInfo": [
+    {
+      "DomainName": "windows.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "40.83.104.208",
+          "IncludeInScript": true,
+          "Name": "techspecstorage.blob.core.windows.net",
+          "Port": 80,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 187,
+              "EventId": 1174,
+              "HttpStatus": 200,
+              "Size": 63596,
+              "URL": "http://techspecstorage.blob.core.windows.net/siteimages/096%20-%20stained%20old%20pine%20deck%20-%20C.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 172,
+              "EventId": 1171,
+              "HttpStatus": 200,
+              "Size": 91900,
+              "URL": "http://techspecstorage.blob.core.windows.net/siteimages/095%20-%20stained%20old%20pine%20deck%20-%20B.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 187,
+              "EventId": 1143,
+              "HttpStatus": 200,
+              "Size": 31976,
+              "URL": "http://techspecstorage.blob.core.windows.net/siteimages/094%20-%20stained%20old%20pine%20deck%20-%20A.jpg"
+            }
+          ],
+          "SSLCipher": "None",
+          "SSLVersion": "None"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "40.83.104.208",
+          "IncludeInScript": true,
+          "Name": "techspecstorage.blob.core.windows.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 234,
+              "EventId": 1186,
+              "HttpStatus": 200,
+              "Size": 303744,
+              "URL": "https://techspecstorage.blob.core.windows.net/siteimages/TS0003_E_TJ_woodsman_closeup_of_63LARGE.jpg"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "resenetechspec.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.101.222.150",
+          "IncludeInScript": true,
+          "Name": "www.resenetechspec.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 1338,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://www.resenetechspec.com/Home/SetGAClientID?id=2001375033.1560567924"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 46,
+              "EventId": 1336,
+              "HttpStatus": 404,
+              "Size": 3197,
+              "URL": "https://www.resenetechspec.com/Scripts/knockout.mapping-latest.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 109,
+              "EventId": 1333,
+              "HttpStatus": 200,
+              "Size": 26327,
+              "URL": "https://www.resenetechspec.com/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 46,
+              "EventId": 1331,
+              "HttpStatus": 302,
+              "Size": 118,
+              "URL": "https://www.resenetechspec.com/Account/LogOff"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 1323,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://www.resenetechspec.com/Home/SetGAClientID?id=2001375033.1560567924"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 62,
+              "EventId": 1321,
+              "HttpStatus": 404,
+              "Size": 3197,
+              "URL": "https://www.resenetechspec.com/Scripts/knockout.mapping-latest.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 172,
+              "EventId": 1318,
+              "HttpStatus": 200,
+              "Size": 27223,
+              "URL": "https://www.resenetechspec.com/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 109,
+              "EventId": 1316,
+              "HttpStatus": 302,
+              "Size": 118,
+              "URL": "https://www.resenetechspec.com/Account/Login"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 46,
+              "EventId": 1289,
+              "HttpStatus": 200,
+              "Size": 3126,
+              "URL": "https://www.resenetechspec.com/Content/images/spinworking.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 1286,
+              "HttpStatus": 404,
+              "Size": 3197,
+              "URL": "https://www.resenetechspec.com/Scripts/knockout.mapping-latest.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 156,
+              "EventId": 1282,
+              "HttpStatus": 200,
+              "Size": 26069,
+              "URL": "https://www.resenetechspec.com/Account/Login"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/x-icon",
+              "DownloadTime": 94,
+              "EventId": 1264,
+              "HttpStatus": 200,
+              "Size": 12342,
+              "URL": "https://www.resenetechspec.com/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 1241,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://www.resenetechspec.com/Home/SetGAClientID?id=2001375033.1560567924"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 47,
+              "EventId": 1176,
+              "HttpStatus": 200,
+              "Size": 4674,
+              "URL": "https://www.resenetechspec.com/engine1/pause.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 63,
+              "EventId": 1168,
+              "HttpStatus": 200,
+              "Size": 2998,
+              "URL": "https://www.resenetechspec.com/content/images/resene_logo_footer.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 1164,
+              "HttpStatus": 200,
+              "Size": 43,
+              "URL": "https://www.resenetechspec.com/content/images/spacer.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 63,
+              "EventId": 1155,
+              "HttpStatus": 200,
+              "Size": 77652,
+              "URL": "https://www.resenetechspec.com/data1/images/homepage4.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 47,
+              "EventId": 1139,
+              "HttpStatus": 200,
+              "Size": 16301,
+              "URL": "https://www.resenetechspec.com/Content/images/gradient_background_bg.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 360,
+              "EventId": 1118,
+              "HttpStatus": 200,
+              "Size": 57435,
+              "URL": "https://www.resenetechspec.com/data1/images/homepage3.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 344,
+              "EventId": 1115,
+              "HttpStatus": 200,
+              "Size": 83576,
+              "URL": "https://www.resenetechspec.com/data1/images/homepage2.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 188,
+              "EventId": 1110,
+              "HttpStatus": 200,
+              "Size": 29230,
+              "URL": "https://www.resenetechspec.com/data1/images/homepage1.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 46,
+              "EventId": 1107,
+              "HttpStatus": 200,
+              "Size": 27998,
+              "URL": "https://www.resenetechspec.com/Scripts/move.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 47,
+              "EventId": 1104,
+              "HttpStatus": 200,
+              "Size": 3514,
+              "URL": "https://www.resenetechspec.com/engine1/script.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 1097,
+              "HttpStatus": 200,
+              "Size": 15398,
+              "URL": "https://www.resenetechspec.com/engine1/wowslider.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 93,
+              "EventId": 1095,
+              "HttpStatus": 200,
+              "Size": 75145,
+              "URL": "https://www.resenetechspec.com/Scripts/TechSpecMainScripts.js?ver=37"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 141,
+              "EventId": 1085,
+              "HttpStatus": 404,
+              "Size": 3197,
+              "URL": "https://www.resenetechspec.com/Scripts/knockout.mapping-latest.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 1061,
+              "HttpStatus": 200,
+              "Size": 4800,
+              "URL": "https://www.resenetechspec.com/Content/Bootstrap/js/application.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 62,
+              "EventId": 1058,
+              "HttpStatus": 200,
+              "Size": 12497,
+              "URL": "https://www.resenetechspec.com/Content/images/ReseneHeader_rgb_small.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 1056,
+              "HttpStatus": 200,
+              "Size": 11516,
+              "URL": "https://www.resenetechspec.com/Content/images/working.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 47,
+              "EventId": 1053,
+              "HttpStatus": 200,
+              "Size": 519528,
+              "URL": "https://www.resenetechspec.com/Scripts/froala-editor/js/froala_editor.pkgd.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 313,
+              "EventId": 1047,
+              "HttpStatus": 200,
+              "Size": 1301,
+              "URL": "https://www.resenetechspec.com/Scripts/jquery-ui-touch-punch.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 296,
+              "EventId": 1043,
+              "HttpStatus": 404,
+              "Size": 3197,
+              "URL": "https://www.resenetechspec.com/Scripts/knockout.mapping-latest.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 219,
+              "EventId": 1037,
+              "HttpStatus": 200,
+              "Size": 2279,
+              "URL": "https://www.resenetechspec.com/Scripts/jquery.truncate.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 234,
+              "EventId": 1035,
+              "HttpStatus": 200,
+              "Size": 62324,
+              "URL": "https://www.resenetechspec.com/Content/Bootstrap/js/bootstrap.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 1033,
+              "HttpStatus": 200,
+              "Size": 60354,
+              "URL": "https://www.resenetechspec.com/Scripts/knockout-3.4.2.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 79,
+              "EventId": 1031,
+              "HttpStatus": 200,
+              "Size": 4129,
+              "URL": "https://www.resenetechspec.com/Content/Bootstrap/js/bootstrap-toggle.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 94,
+              "EventId": 1029,
+              "HttpStatus": 200,
+              "Size": 7845,
+              "URL": "https://www.resenetechspec.com/Content/Bootstrap/js/bootstrap-tooltip.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 949,
+              "HttpStatus": 200,
+              "Size": 72550,
+              "URL": "https://www.resenetechspec.com/Scripts/moment.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 947,
+              "HttpStatus": 200,
+              "Size": 253668,
+              "URL": "https://www.resenetechspec.com/Scripts/jquery-ui.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 936,
+              "HttpStatus": 200,
+              "Size": 97361,
+              "URL": "https://www.resenetechspec.com/Scripts/jquery.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 78,
+              "EventId": 934,
+              "HttpStatus": 200,
+              "Size": 326770,
+              "URL": "https://www.resenetechspec.com/Scripts/tinymce/tinymce.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 47,
+              "EventId": 932,
+              "HttpStatus": 200,
+              "Size": 18091,
+              "URL": "https://www.resenetechspec.com/Scripts/jQueryFileDownload.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 62,
+              "EventId": 930,
+              "HttpStatus": 200,
+              "Size": 236,
+              "URL": "https://www.resenetechspec.com/Scripts/custom.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 920,
+              "HttpStatus": 200,
+              "Size": 5764,
+              "URL": "https://www.resenetechspec.com/Scripts/jquery.validate.unobtrusive.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 156,
+              "EventId": 918,
+              "HttpStatus": 200,
+              "Size": 5222,
+              "URL": "https://www.resenetechspec.com/engine1/style.css?ver=1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 47,
+              "EventId": 914,
+              "HttpStatus": 200,
+              "Size": 3681,
+              "URL": "https://www.resenetechspec.com/Content/form.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 219,
+              "EventId": 876,
+              "HttpStatus": 200,
+              "Size": 23261,
+              "URL": "https://www.resenetechspec.com/Scripts/jquery.validate.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 219,
+              "EventId": 874,
+              "HttpStatus": 200,
+              "Size": 3654,
+              "URL": "https://www.resenetechspec.com/Scripts/jquery.unobtrusive-ajax.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 203,
+              "EventId": 872,
+              "HttpStatus": 200,
+              "Size": 86927,
+              "URL": "https://www.resenetechspec.com/Scripts/jquery-3.3.1.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 94,
+              "EventId": 867,
+              "HttpStatus": 200,
+              "Size": 50895,
+              "URL": "https://www.resenetechspec.com/Content/site.css?ver=1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 47,
+              "EventId": 865,
+              "HttpStatus": 200,
+              "Size": 1819,
+              "URL": "https://www.resenetechspec.com/Content/Bootstrap/css/bootstrap-toggle.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 62,
+              "EventId": 804,
+              "HttpStatus": 200,
+              "Size": 142074,
+              "URL": "https://www.resenetechspec.com/Content/Bootstrap/css/bootstrap.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 109,
+              "EventId": 677,
+              "HttpStatus": 200,
+              "Size": 26327,
+              "URL": "https://www.resenetechspec.com/"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "gstatic.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.167.67",
+          "IncludeInScript": true,
+          "Name": "ssl.gstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 109,
+              "EventId": 680,
+              "HttpStatus": 200,
+              "Size": 69547,
+              "URL": "https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_ext_variation_0.pb"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 47,
+              "EventId": 675,
+              "HttpStatus": 200,
+              "Size": 69547,
+              "URL": "https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_variation_0.pb"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "googleapis.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "216.58.200.106",
+          "IncludeInScript": true,
+          "Name": "fonts.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 156,
+              "EventId": 1145,
+              "HttpStatus": 200,
+              "Size": 471,
+              "URL": "https://fonts.googleapis.com/css?family=EB+Garamond&subset=latin,cyrillic,latin-ext"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "216.58.196.131",
+          "IncludeInScript": true,
+          "Name": "clientservices.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 219,
+              "EventId": 699,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://clientservices.googleapis.com/chrome-variations/seed?osname=win&channel=stable&milestone=74"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "216.58.199.78",
+          "IncludeInScript": true,
+          "Name": "sb-ssl.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 485,
+              "EventId": 1311,
+              "HttpStatus": 200,
+              "Size": 215,
+              "URL": "https://sb-ssl.google.com/safebrowsing/clientreport/login?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.25.142",
+          "IncludeInScript": true,
+          "Name": "clients2.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/xml",
+              "DownloadTime": 218,
+              "EventId": 1272,
+              "HttpStatus": 200,
+              "Size": 410,
+              "URL": "https://clients2.google.com/service/update2/crx?os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=chromecrx&prodchannel=&prodversion=74.0.3729.169&lang=en-US&acceptformat=crx2,crx3&x=id%3Daapocclcgogkmnckokdopfmhonfmgoek%26v%3D0.10%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Daohghmighlieiainnegkcijnfilokake%26v%3D0.10%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dapdfllckaahabafndbhieahigkjlhalf%26v%3D14.2%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dblpcfgokakmgnkcojhhkbfbldkacnbeo%26v%3D4.2.8%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dfelcaaldnbdncclmgdcncolpebgiejap%26v%3D1.2%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dghbmnnjooekpmoecnnnilnnbdlolhkhi%26v%3D1.7%26installedby%3Dexternal%26uc%26brand%3DCHBF&x=id%3Dnmmhkkegccagdldgiimedpiccmgmieda%26v%3D1.0.0.4%26installedby%3Dother%26uc%26brand%3DCHBF&x=id%3Dpjkljhegncpnkpknbcohdijeoejaedia%26v%3D8.2%26installedby%3Dinternal%26uc%26brand%3DCHBF&x=id%3Dpkedcjkdefgpdelpbcmbmeomcjbeemfm%26v%3D7419.311.0.1%26installedby%3Dother%26uc%26brand%3DCHBF"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "216.58.196.142",
+          "IncludeInScript": true,
+          "Name": "clients1.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/proto",
+              "DownloadTime": 47,
+              "EventId": 1225,
+              "HttpStatus": 200,
+              "Size": 25,
+              "URL": "https://clients1.google.com/tbproxy/af/query?q=Chc2LjEuMTcxNS4xNDQyL2VuIChHR0xMKRMZ6hAhndAIRb4jLTWF3YUkFA=="
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google-analytics.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.25.142",
+          "IncludeInScript": true,
+          "Name": "www.google-analytics.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 141,
+              "EventId": 1239,
+              "HttpStatus": 200,
+              "Size": 35,
+              "URL": "https://www.google-analytics.com/r/collect?v=1&_v=j76&a=1486493267&t=pageview&_s=1&dl=https%3A%2F%2Fwww.resenetechspec.com%2F&ul=en-us&de=UTF-8&dt=Welcome%20to%20Resene%20Techspec%20-%20Resene%20TechSpec%20System&sd=24-bit&sr=1280x800&vp=1263x689&je=0&_u=IEBAAAAB~&jid=836495306&gjid=1893732914&cid=2001375033.1560567924&tid=UA-49289843-1&_gid=101686158.1560567924&_r=1&z=1556351407"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 47,
+              "EventId": 1218,
+              "HttpStatus": 200,
+              "Size": 17595,
+              "URL": "https://www.google-analytics.com/analytics.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "datatables.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.20.42.93",
+          "IncludeInScript": true,
+          "Name": "cdn.datatables.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 250,
+              "EventId": 1039,
+              "HttpStatus": 200,
+              "Size": 2651,
+              "URL": "https://cdn.datatables.net/rowreorder/1.2.3/js/dataTables.rowReorder.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 125,
+              "EventId": 954,
+              "HttpStatus": 200,
+              "Size": 980,
+              "URL": "https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 109,
+              "EventId": 944,
+              "HttpStatus": 200,
+              "Size": 27843,
+              "URL": "https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 94,
+              "EventId": 942,
+              "HttpStatus": 200,
+              "Size": 5855,
+              "URL": "https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 79,
+              "EventId": 940,
+              "HttpStatus": 200,
+              "Size": 3848,
+              "URL": "https://cdn.datatables.net/autofill/2.2.2/js/dataTables.autoFill.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 344,
+              "EventId": 925,
+              "HttpStatus": 200,
+              "Size": 1776,
+              "URL": "https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 313,
+              "EventId": 923,
+              "HttpStatus": 200,
+              "Size": 214,
+              "URL": "https://cdn.datatables.net/rowreorder/1.2.3/css/rowReorder.dataTables.min.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 156,
+              "EventId": 916,
+              "HttpStatus": 200,
+              "Size": 704,
+              "URL": "https://cdn.datatables.net/autofill/2.2.2/css/autoFill.dataTables.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 62,
+              "EventId": 902,
+              "HttpStatus": 200,
+              "Size": 2109,
+              "URL": "https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "cloudflare.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.19.198.151",
+          "IncludeInScript": true,
+          "Name": "cdnjs.cloudflare.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 234,
+              "EventId": 883,
+              "HttpStatus": 200,
+              "Size": 1207,
+              "URL": "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/css/froala_style.min.css"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 344,
+              "EventId": 881,
+              "HttpStatus": 200,
+              "Size": 7236,
+              "URL": "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/css/froala_editor.pkgd.min.css"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 203,
+              "EventId": 879,
+              "HttpStatus": 200,
+              "Size": 1430,
+              "URL": "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 140,
+              "EventId": 869,
+              "HttpStatus": 200,
+              "Size": 5730,
+              "URL": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": false
+  },
+  "NumberOfCorrelations": 2
+}

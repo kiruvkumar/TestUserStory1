@@ -1,0 +1,66 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=TestUserStory1_Logging.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=60
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.60.0.971
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=12.60.0.971
+DisableRegenerate=0
+Encoding=ANSI
+Description=
+ScriptLocale=en-NZ
+[Actions]
+vuser_init=vuser_init.c
+TestUserStory1_Login=TestUserStory1_Login.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=0
+TestUserStory1_Login=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+TestUserStory1_Login=1
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+TestUserStory1_Login=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+TestUserStory1_Login=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="TestUserStory1_01_LauchUrl__*delimiter*__TestUserStory1_02_Click_Login__*delimiter*__TestUserStory1_03_EnterCredentials_ClickSignin__*delimiter*__TestUserStory1_04_LogOff__*delimiter*__TestUserStory1_01_LauchUrl__*delimiter*__TestUserStory1_02_Click_Login__*delimiter*__TestUserStory1_03_EnterCredentials_ClickSignin__*delimiter*__TestUserStory1_04_LogOff"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+TestUserStory1_01_LauchUrl=
+TestUserStory1_02_Click_Login=
+TestUserStory1_03_EnterCredentials_ClickSignin=
+TestUserStory1_04_LogOff=
+[Rendezvous]
+1000_Users=

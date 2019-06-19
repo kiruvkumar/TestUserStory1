@@ -1,0 +1,11 @@
+POST /ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard HTTP/1.1
+Host: accounts.google.com
+Connection: keep-alive
+Content-Length: 1
+Origin: https://www.google.com
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: ACCOUNT_CHOOSER=AFx_qI7wELbU4Dgvyf7iP-TaXzi4fJrAmhWSAVnVR371dLGkxaSziV41gSEzaE_W2JWDf5vrcM3E9_Q6HC1zBbiHXDPxyMEtE6O8r_jp8hbcR1zRK3XU1sHoMnuiMr0QZni0UnSQnyMW7YGB_P0i-pkmQzdA1BVOBY5xdfSOO08kQPZsy_YkUX0; SID=agfa7uoUw_Dp5LER5DHwhsE5ZBMJTABjYuw5bj2Xw7GbP_ApxxtJyZgYqL-3oVJqboUWdw.; HSID=AR3gDnnBDW1uc1iXw; SSID=AZ70jqvnOdql28yTH; APISID=irDfDf4WbkJnE5RV/AfHVLwg21J9Mx2-WU; SAPISID=WiYsCv-2UfP0v7Ys/A9EvFAu2SJWejZyaG; LSID=doritos|lso|o.mail.google.com|s.NZ|s.youtube|ss:agfa7tJbCmFp51LKSVY6F45kgKaP3yNfdID6TEo-RQ25pRb254RAvFgmXfY_ynZFlSqZBw.; ANID=AHWqTUkLs0pKG7JzR3MmHPcFn_qipjFjJGV6QBCPVeiKpQSgSjQyU0g2msWErz8c; GAPS=1:RsGPo3OZ35q_aLyWxErAOCIUmtA8W9FhUYVRI8ZtBepJWgamo5jDldEf0CR-TrcA35tql42VrcTlkWQYHwLDmFC8g8ASMg:jKZNF2cW3Wpd5pEw; NID=185=Rizw8BKhYHzfZ96T-zWEw8tVpdKXKjhE-VFm2Xry6ve-NF8knRmHpJJwnh3Tu-7Sop2xy633y8tFaaFl-DiQpNDsL0-VNqZO_BkyD0bifbI4xc1E7JsvPhYeCVIPLLJlTm_G0sbLkTx9R9C-eeOiHaglok8ODUed-3eTiyFVJ7j8GSWPF3ZmQk3QBnNCo0gkvOYOh0V0BPAbKcN72vhPXQ; 1P_JAR=2019-06-15-02; SIDCC=AN0-TYullobzt-WwGwC47FO277EK12yVjFPmLBp20Cl_y3fLovZaqPe7m7FeP-_USCgio-ZTBA
+

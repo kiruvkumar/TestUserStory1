@@ -1,0 +1,1703 @@
+﻿function showMCENarrow() {
+    tinymce.init({
+        selector: "textarea",
+        theme: "modern",
+        height: 80,
+        width: 500,
+        external_plugins: { "nanospell": "plugins/nanospell/plugin.js" },
+        nanospell_server: "asp.net",
+        menubar: false,
+        statusbar: false,
+        toolbar: "bold italic ",
+        plugins: 'paste',
+        paste_as_text: true,
+        //content_css: "css/content.css",
+        style_formats: [
+        ],
+        init_instance_callback: "showMCEComplete",
+        setup: function (ed) {
+
+            ed.on('keyup', function (e) {
+                setSession(true);
+            });
+        }
+    });
+}
+
+function showMCE() {
+    tinymce.init({
+        selector: "textarea",
+        theme: "modern",
+        width: 550,
+        external_plugins: {"nanospell": "plugins/nanospell/plugin.js"},
+        nanospell_server: "asp.net",
+        menubar: false,
+        statusbar: false,
+        toolbar: "bold italic ",
+        plugins: 'paste',
+        paste_as_text:true,
+        //content_css: "css/content.css",
+        style_formats: [
+        ],
+        init_instance_callback : "showMCEComplete",
+        setup: function (ed) {
+                
+            ed.on('keyup', function (e) {
+                setSession(true);
+            });
+        }
+    });
+}
+    
+function showMCEComplete()
+{
+    $('mceComponent').style.display = 'block';
+}
+
+function setConditionResultDetails(inval, displayReason, helpText) {
+    try {
+        jQuery('#substrateConditionMappingId').val(inval);
+        jQuery('#displayReasonCondition').val(displayReason);
+
+        tinymce.init({
+            selector: "textarea",
+            theme: "modern",
+            editor_selector: "conditionEditor",
+            width: 350,
+            height: 100,
+            menubar: false,
+            statusbar: false,
+            external_plugins: { "nanospell": "plugins/nanospell/plugin.js" },
+            nanospell_server: "asp.net",
+            paste_word_valid_elements: "b,strong,i,em,h1,h2",
+            plugins: 'paste',
+            paste_as_text: true,
+            plugins: ["link image"
+            ],
+            // content_css: "css/content.css",
+            toolbar: "bold italic | link image",
+            image_list: [
+                { title: 'My image 1', value: 'http://www.tinymce.com/my1.gif' },
+                { title: 'My image 2', value: 'http://www.moxiecode.com/my2.gif' }
+            ],
+            style_formats: [
+            ]
+        });
+        helpText = String(helpText).replaceAll('%22', '"');
+        tinymce.get('conditionEditor').setContent(helpText);
+    }
+    catch (e)
+    { 
+        //alert(e); 
+    }
+}
+
+function setSubstrateResultDetails(inval, displayReason, helpText) {
+    try {
+        jQuery('#resultId').val(inval);
+        jQuery('#displayReasonSubstrate').val(displayReason);
+            
+        helpText = String(helpText).replaceAll('%22', '"');
+        tinymce.get('substrateEditor').setContent(helpText);
+    }
+    catch (e)
+    { 
+        //alert(e); 
+    }
+}
+
+function setResultDetails(inval,displayReason,helpText) {
+    try{
+        jQuery('#resultId').val(inval);
+        jQuery('#displayReason').val(displayReason);
+        helpText = String(helpText).replaceAll('&nbsp;', ' '); 
+        tinymce.init({
+            selector: "textarea",
+            theme: "modern",
+            width: 350,
+            height: 100,
+            menubar: false,
+            statusbar: false,
+            paste_word_valid_elements: "b,strong,i,em,h1,h2",
+            plugins: 'paste',
+            paste_as_text: true,
+            plugins: ["link image"
+            ],
+            external_plugins: { "nanospell": "plugins/nanospell/plugin.js" },
+            nanospell_server: "asp.net",
+            toolbar: "bold italic | link image",
+            image_list: [ 
+                {title: 'My image 1', value: 'http://www.tinymce.com/my1.gif'}, 
+                {title: 'My image 2', value: 'http://www.moxiecode.com/my2.gif'} 
+            ],
+            style_formats: [
+            ]
+        });
+        helpText = String(helpText).replaceAll('%22', '"');
+        
+        tinymce.activeEditor.setContent(helpText);
+    }
+    catch (e)
+    { 
+        //alert(e); 
+    }
+}
+
+// helper to check the length of a field on the fly
+function validateTextInput(value, maxLength, type,elementid , valueelementid,message,placeholder,validateprojectcreate) {
+    if (String(type).toLowerCase() == 'general') {
+        if (value.length > maxLength-1) {
+            jQuery('#' + valueelementid).val(String($(valueelementid).value).substring(0, maxLength));
+        }
+        else {
+            if (placeholder) {
+                message = '&nbsp;';
+            }
+            else {
+                message = '';
+            }
+        }
+        $(elementid).innerHTML = message;
+    }
+    // extra check to see if we need to validate the create project form
+    if (validateprojectcreate)
+    {
+        checkCreateForm();
+    }
+    return true;
+}
+
+function checkCreateForm() {
+    if (String($('projectTitle').value).length > 0 && String($('contract').value).length > 0 && String($('building').value).length > 0 && String($('location').value).length > 0 && String($('owner').value).length > 0) {
+        $('executeButton').disabled = false;
+        jQuery('#executeButton').removeClass("btn btn-large btn-block btn-primary disabled");
+        jQuery('#executeButton').addClass("btn btn-large btn-block btn-primary");
+    } else {
+        jQuery('#executeButton').removeClass("btn btn-large btn-block btn-primary");
+        jQuery('#executeButton').addClass("btn btn-large btn-block btn-primary disabled");
+        $('executeButton').disabled = true;
+    }
+}
+
+// activateMCE for first time use
+
+function highlightMCE() {
+    if ($("firstLoad").value == "") {
+        jQuery("#firstLoad").val("true");
+        setTimeout(500, function () {
+            tinymce.init({
+
+                selector: "textarea",
+                theme: "modern",
+                editor_selector: "substrateAddenda",
+                width: 250,
+                height: 100,
+                menubar: false,
+                statusbar: false,
+                external_plugins: { "nanospell": "plugins/nanospell/plugin.js" },
+                nanospell_server: "asp.net",
+                paste_word_valid_elements: "b,strong,i,em,h1,h2",
+                plugins: 'paste',
+                paste_as_text: true,
+                plugins: ["link image"
+                ],
+                // content_css: "css/content.css",
+                toolbar: "bold italic | link image",
+                image_list: [
+                    { title: 'My image 1', value: 'http://www.tinymce.com/my1.gif' },
+                    { title: 'My image 2', value: 'http://www.moxiecode.com/my2.gif' }
+                ],
+                style_formats: [
+                ]
+            });
+        });
+    }
+}
+
+// display the working graphic
+function showWorking() {
+    $('working').style.display = 'block';
+    $('homeScreen').style.display = 'none';
+    //runLogger("Working", "Home", "param1|param2", "value1|value2");
+}
+        
+// show or hide rows on the results table depennding on which button has been clicked
+function toggleHiddenRows( show) {
+    position = "otherrowtop";
+    for (j = 0; j < 2; j++) {
+        if (j == 1) { position = "otherrowbottom"; }
+
+        try{
+            for (var i = 0; i <= parseInt(20) ; i++) {
+                if (show == 'true') {
+                    $(position + String(i)).style.display = '';
+                }
+                else {
+                    $(position + String(i)).style.display = 'none';
+                }
+            }
+        }
+        catch (e) {
+        }
+    }
+    if (show == 'true') {
+        $("viewOtherOptions").style.display = 'none';
+        $("hideOtherOptions").style.display = 'inline';
+    }
+    else {
+        $("viewOtherOptions").style.display = 'inline';
+        $("hideOtherOptions").style.display = 'none';
+    }
+    // log the action
+    runLogger("toggleOtherSolutions", "solutions", "show", String(show));
+}
+
+// functions to toggle visiblity of elements on the page
+function myCallback() {
+    $('buildSpec').style.display = 'block';
+    $('working').style.display = 'none';
+}
+
+function movePopup() {
+    jQuery('#isOnResultPopup').val('show');
+    setTimeout(function () {
+        var testPopover = jQuery('.popover.fade.left.in');
+        testPopover.css("top", "15px");
+        }, 50);
+}
+
+function viewSolutions() {
+    if ($('substrate').value != '') {
+        
+        $('showOptions').style.display = 'block';
+        value = $('substrate').value;
+        if (value.indexOf('<span id') > 0) {
+            var cleanVal = value;
+            var spanLocation = cleanVal.indexOf('<span id');
+            value = cleanVal.substring(0, spanLocation);
+        }
+        try{
+            var popover = $('popoverTextSCM').value;
+            if (popover.length > 0) {
+                value = value + '<span id="subsPopoverHelp">' + popover + '</span>';
+            }
+        }
+        catch(e){}
+        $('buildSpec').style.display = 'none';
+        $('substrateSelection').innerHTML = value;
+        //$('substrate').value = '';
+
+        // tooltip demo
+        jQuery('.tooltip-demo').tooltip({
+            selector: "a[data-toggle=tooltip]"
+        });
+       
+        jQuery('.tooltip-test').tooltip();
+        jQuery('.popover-test').popover();
+
+        // popover demo
+        jQuery("a[data-toggle=popover]")
+          .popover()
+          .click(function (e) {
+              e.preventDefault()
+          });
+    }
+}
+       
+function confirmSelection() {
+    $('buildSpec').style.display = 'none';
+    $('showOptions').style.display = 'none';
+}
+
+function selectSubstrateDetailRadio(id, description) {
+    jQuery('#' + String(id)).prop('checked',true);
+    getConditions(id, description);
+}
+
+function selectConditionRadio(substratedetail, id) {
+    jQuery('#condition' + String(id)).prop('checked', true);
+    setResult(substratedetail, id);
+}
+
+function backtoSelection() {
+    jQuery('.popover').css('max-width', '350px');
+
+    if ($('hasAutoTyped').value == 'truetruesecondscreen') {
+        location.href = "Home/ReturnToSystemArea";
+    }
+    else
+    {
+        try {
+            $('buildSpec').style.display = 'block';    
+        }
+        catch (e) { }
+        try {
+            $('mainScreenSelection').style.display = 'block';
+        }
+        catch (e) { }
+        try {
+            $('optionsScreen').style.display = 'block';
+        }
+        catch (e) { }
+        try {
+            $('showOptions').style.display = 'none';
+        }
+        catch(e){}
+        try{
+            $('working').style.display = 'none';
+        }
+        catch (e) { }
+        try {
+            if ($('substrateDetailSelected').value != '') {
+                jQuery("#" + $('substrateDetailSelected').value).attr('checked', 'checked');
+            }
+            //alert($('conditionSelected').value);
+            if ($('conditionSelected').value != '') {
+                jQuery("#condition" + $('conditionSelected').value).attr('checked', 'checked');
+            }
+        }
+        catch (e) { }
+        }
+        jQuery.post(
+            ROOT + "Home/ResetPopup");
+        runLogger('backToSelection', 'selection', 'button', 'back');
+}
+
+function updateSelectedSubstrate(isAddOn,inval) {
+    if(isAddOn=='True'){
+        $("spinworkingquestion1").style.display = "inline";
+    }
+    else {
+        $("spinworkingquestion").style.display = "inline";
+    }    
+    var popover = $('popoverTextSCM').value;
+    var value = '';
+    if (popover.length > 0) {
+        value = value + '<span id="subsPopoverHelp">' + popover + '</span>';
+    }
+    
+    inval = decodeURIComponent(inval);
+    inval = String(inval).split('+').join(' ');
+    $('substrateSelection').innerHTML = inval+value;
+    jQuery('#substrate').val(inval);
+    try {
+        jQuery('#modalShowQuestions').modal('hide');
+    } catch (e) { }
+}
+
+function afterPassword() {
+    jQuery('#logonButton').focus();
+}
+
+function enterAjaxParam() {
+    var inval = $('substrate').value;
+    var questions = $('substrateQuestions').innerHTML;
+    
+    if (inval != '') {
+        var qid = '0';
+        var oldval = String(inval).toUpperCase();
+        var searchtext = String(questions).replace(/&amp;/g, '&').toUpperCase();
+        // check if this substrate has an additonal question to ask - if it does we need to return the question to ask
+        if (searchtext.indexOf(oldval) > -1) {
+            var splitQuestion = searchtext.split(oldval + ';');
+            var splitId=String(splitQuestion[1]).split(',');
+            qid=splitId[0];
+        }
+        runLogger('enterSubstrate', 'substrate', 'substrateEntered', inval);
+        inval = encodeURIComponent(inval);
+        // need to pass the relevant area back to the ajax method
+        var area = $('selectedCategory').innerHTML;
+        area = encodeURIComponent(area);
+        jQuery('#hasAutoTyped').val('true' + $('hasAutoTyped').value);
+        var text = '<a id="solutionsButton" data-ajax="true" data-ajax-method="POST"  onclick="showSelectionWorking()" data-ajax-mode="replace" data-ajax-success="viewSolutions" data-ajax-update="#solutionTable" href="/Home/GetSystemResults?selectedText=' + inval + '&questionid=0&area=' + area + '&&isAddOn=false&isAddOnSelected=false&filterArea=false&isFirst=true&loadJS=true" role="button" class="btn btn-large  btn-primary"  style="color:white" >View Solutions</a>';
+        $('viewsolutionButton').innerHTML = text;
+        
+        jQuery('#solutionsButton').focus();
+    }
+}
+
+function viewOptions() {
+    $("showOptions").style.display = "block";
+    $("mainScreenSelection").style.display = "block";
+    $("confirmSelect").innerHTML = "";
+    runLogger('backToSolutions', 'solutions', 'button', 'back');
+    // bug only seen in IE
+    if (jQuery.browser.msie) {
+        tinymce.remove('textarea');
+    }
+}
+
+//process selected options
+function processSelection(group1Options, group2Options) {
+    showSelectionWorking();
+    var t = '';
+    var u = '';
+    var v = '';
+    try{
+        for (var i = 0; i <= parseInt(group2Options) ; i++) {
+            if (t == '') {
+                var s = jQuery('#group1' + String(i)).prop('checked');
+                if (String(s) == 'true') {
+                    t = jQuery('#group1' + String(i)).val();
+                }
+            }
+        }
+    }
+    catch (e) { }
+
+    try{  
+        for (var i = 0; i <= parseInt(group2Options) ; i++) {
+            if (u == '') {
+                var s = jQuery('#group2' + String(i)).prop('checked');
+
+                if (String(s) == 'true') {
+                    u = jQuery('#group2' + String(i)).val();
+                }
+            }
+        }
+    }
+    catch (e) { }
+
+    try {
+        for (var i = 0; i <= parseInt(group2Options) ; i++) {
+            if (v == '') {
+                                 
+                var s = jQuery('#group3' + String(i)).prop('checked');
+                                 
+                if (String(s) == 'true') {
+                    v = jQuery('#group3' + String(i)).val();
+                }
+            }
+        }
+                    
+    }
+    catch (e) { }
+
+    if (v == '') {
+        v = '0';
+    }
+    var extraProduct = jQuery('#extraProduct').val();
+    var extraProductResult=jQuery('#extraProductResult').val();
+    var topCategory = encodeURIComponent(jQuery('#topCategory').val());
+    var middleCategory = encodeURIComponent(jQuery('#middleCategory').val());
+               
+    var bottomCategory = encodeURIComponent(jQuery('#bottomCategory').val());
+    var backQueryString = encodeURIComponent(jQuery('#backQueryString').val());
+    backQueryString = backQueryString.replace(/ampersand/g, '%26');
+    var substrate = encodeURIComponent($('substrateSelection').innerHTML);
+
+    if (substrate.indexOf('subsPopoverHelp') > 0) {
+        
+        substrate = substrate.substr(0, substrate.indexOf('%3Cspan%20id%3D%22subsPopoverHelp'));
+    }
+     
+    var area = encodeURIComponent($('selectedArea').innerHTML);
+    
+    jQuery.ajax({
+        type: 'GET',
+        contentType: "text/xml",
+
+        url: ROOT + "Home/GetConfirmedSelection?result1=" + t + "&result2=" + u + "&result3=" + v + "&systemArea=" + area + "&substrateSelected="
+                + substrate + "&extraProduct=" + extraProduct + "&extraProductResult=" + extraProductResult
+                + "&topCategory=" + topCategory + "&middleCategory=" + middleCategory + "&bottomCategory=" + bottomCategory + "&backQuery=" + backQueryString,
+        success: function (result) {
+            var str = result;
+            
+            $('working').style.display = 'none';
+            $("confirmSelect").innerHTML = str;
+            showMCENarrow();
+           
+            $("showOptions").style.display = "none";
+            
+            jQuery('.tooltip-demo').tooltip({
+                selector: "a[data-toggle=tooltip]"
+            })
+            jQuery('.tooltip-test').tooltip();
+            jQuery('.popover-test').popover();
+            // popover demo
+            jQuery("a[data-toggle=popover]")
+              .popover()
+              .click(function (e) {
+                  e.preventDefault()
+              })
+            
+            document.cookie = "first_load=true";
+            $('specHeadingReminder').style.display = "inline";
+            jQuery('#specHeadingReminder').fadeOut(100, function () {
+                window.scrollTo(0, 0);
+                jQuery('#specificationHeading').focus();
+                $('specHeadingReminder').style.display = "inline";
+                jQuery('#specHeadingReminder').fadeOut(200, function () {
+                    window.scrollTo(0, 0);
+                    jQuery('#specificationHeading').focus();
+                });
+            });
+        },
+        error: function () {
+            $('working').style.display = 'none';
+        }
+});
+}
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds) {
+            break;
+        }
+    }
+}
+
+function resetReminder() {
+    jQuery('#specificationHeading').css("border-color", "red");
+    jQuery('#specificationHeading').css("border-width", "2px");
+    $('specHeadingReminder').style.display = "inline";
+    
+    jQuery('#specHeadingReminder').fadeOut(1000, function () {
+        jQuery('#specificationHeading').css("border-color", "#cccccc");
+        jQuery('#specificationHeading').css("border-width", "1px");
+        jQuery('#specificationHeading').focus();
+    });
+    var pPDF = document.URL;
+    
+    if (pPDF.indexOf('Home/') > 0) {
+        pPDF = $('prntPDF').innerHTML;
+        $('prntPDF').innerHTML = pPDF.replace('Home/', '');
+        pPDF = $('prntWord').innerHTML;
+        $('prntWord').innerHTML = pPDF.replace('Home/', '');
+    }
+}
+
+function cleanTags(inText) {
+    // clean up HTML created by TinyMCE
+    inText = inText.replaceAll('<p>  </p>', '');
+    inText = inText.replaceAll('<p> </p>', '');
+    inText = inText.replaceAll('<p></p>', '');
+    inText = inText.replaceAll('<p>&nbsp;</p>', '');
+    inText = inText.replaceAll('<p>&nbsp;&nbsp;</p>', '');
+    // inText = inText.replaceAll('"', ''); // Removed to allow double-quotes. Kris 2018-04-13
+    inText = inText.replaceAll('<p><br data-mce-bogus="1"></p>', '');
+    inText = inText.replaceAll('<p><br data-mce-bogus=1></p>', '');
+    inText = inText.replaceAll('&ldquo;', '"');
+    inText = inText.replaceAll('&rdquo;', '"');
+    return inText;
+}
+
+function SaveConditionHelpText() {
+    var substrateConditionMappingId = $('substrateConditionMappingId').value;
+
+    var helpText = tinyMCE.activeEditor.getContent({ format: 'raw' });
+    helpText = cleanTags(helpText);
+    jQuery('#helpTextContentCondition').val(helpText);
+    
+    var jsonObj = '"' + String(substrateConditionMappingId) + '","' + encodeURIComponent(helpText) + '"';
+
+    jQuery.post(
+            ROOT + "Home/SaveConditionHelpText",
+    { postvalues: jsonObj },
+                                    handleSubstrateDetailHelpTextSuccess
+    );
+}
+
+function SaveSubstrateDetailHelpText() {
+    var substrateDetailId = $('resultId').value;
+    
+    var helpText = tinyMCE.activeEditor.getContent({ format: 'raw' });
+    helpText = cleanTags(helpText);
+    jQuery('#helpTextContent').val(helpText);
+
+    var jsonObj = '"' + String(substrateDetailId) + '","' + encodeURIComponent(helpText) + '"';
+    
+    jQuery.post(
+            ROOT + "Home/SaveSubstrateDetailHelpText",
+    { postvalues: jsonObj },
+                                    handleSubstrateDetailHelpTextSuccess
+    );
+}
+
+function handleSubstrateDetailHelpTextSuccess() {
+    if (String(document.URL).indexOf('home') >= 0)
+    {
+        location.replace('returntosystemarea');
+    }
+    else
+        {
+        location.replace('home/returntosystemarea');
+    }
+}
+
+function SaveHelpText() {
+    var resultId = $('resultId').value;
+    var displayReason = $('displayReason').value;
+    var substrate = $('substrateSelection').innerHTML;
+            
+    var helpText = tinyMCE.activeEditor.getContent({ format: 'raw' });
+    helpText = cleanTags(helpText);
+    jQuery('#helpTextContent').val(helpText);
+            
+    var jsonObj = '"' + String(resultId) + '","' + encodeURIComponent(displayReason) + '","' + encodeURIComponent(helpText) + '","' + encodeURIComponent(substrate) + '"';
+
+    jQuery.post(
+            ROOT + "Home/SaveHelpText",
+{ postvalues: jsonObj },
+                                handleHelpTextSuccess
+);
+}
+
+function clearTooltip() {
+    try{
+        var lastResultId = $('lastpopup').value;
+        jQuery("#helpTextTip" + String(lastResultId)).tooltip('hide');
+    }
+    catch (e)
+    { }
+}
+
+function activateHoverContent(elementid) {
+    try {
+        jQuery('#' + elementid).popover('show');
+    }
+    catch (e) { }
+}
+
+function deactivateHoverContent(elementid) {
+    try {
+        jQuery('#' + elementid).popover('hide');
+    }
+    catch (e) { }
+}
+
+function hidePopoversSubstrate(currentRow) {
+    try {
+        jQuery('#popOverTopSubstrate').popover('hide');
+    }
+    catch (e) { }
+
+    var popoverCount = parseInt($('popOverSubstrateCount').value);
+    jQuery('#isOnSubstratePopup').val(String(currentRow));
+    // preload all the popovers
+    for (var i = 0; i < popoverCount; i++) {
+        try {
+            if (i != parseInt(currentRow)){
+                jQuery('#helpTextTip' + String(i)).popover('hide');
+            }
+        }
+        catch (e) { }
+    }
+
+    for (var i = 0; i < 10; i++) {
+        try {
+                jQuery('#conditionHelpTextTip' + String(i)).popover('hide');
+        }
+        catch (e) { }
+    }
+    try {
+        runLogger("popoversSubstrate", "selection", "popovershow", $('popoverSubsrateHelpText'));
+    }
+    catch (e) { }
+}
+
+function hidePopoversCondition(currentRow) {
+   try {
+        jQuery('#popOverTopSubstrate').popover('hide');
+   }
+    catch (e) { }
+    var popoverCount = 9;
+    // preload all the popovers
+    jQuery('#isOnSubstratePopup').val(String(currentRow));
+    for (var i = 0; i < popoverCount; i++) {
+        try {
+            if (i != parseInt(currentRow)) {
+                jQuery('#conditionHelpTextTip' + String(i)).popover('hide');
+            }
+        }
+        catch (e) { }
+    }
+    for (var i = 0; i < 25; i++) {
+        try {
+                jQuery('#helpTextTip' + String(i)).popover('hide');
+        }
+        catch (e) { }
+    }
+    runLogger("popoversCondition", "selection", "popovershow", $('conditionhelpText'));
+}
+
+function hidePopoversResults(currentRow,expandPopup) {
+    jQuery('#isOnResultPopup').val(String(currentRow));
+    // decativate additional hover if it's presenet
+    deactivateHoverContent('popoverColumn' + String(currentRow));
+
+    var previousRow = $('popOverCurrentResultId').value;
+    if (parseInt(previousRow) != parseInt(currentRow)) {
+        jQuery('#popOverCurrentResultId').val(String(currentRow));
+        if (previousRow != '') {
+            jQuery('#helpTextTipResults' + String(previousRow)).popover('hide');
+        }
+    } 
+        
+    // if expandpopup is set to true need to expand the width of the popup
+    if (expandPopup) {
+        if ($('onExpand').value != 'true') {
+            setTimeout(function () {
+                var testPopover = jQuery('.popover.fade.right.in');
+                testPopover.css("max-width", "600px");
+                jQuery('#helpTextTipResults' + String(currentRow)).popover('show');
+                jQuery('#onExpand').val('true');
+                setTimeout(function () {
+                    //jQuery('#helpTextTipResults' + String(currentRow)).popover('show');
+                }, 30);
+            }, 25);
+        }
+    } else {
+        if ($('onExpand').value == 'true') {
+            jQuery('#onExpand').val('');
+            setTimeout(function () {
+                var testPopover = jQuery('.popover.fade.right.in');
+                testPopover.css("max-width", "400px");
+                jQuery('#onExpand').val('true');
+
+            }, 50);
+        }
+    }
+    runLogger("popoversResults", "solutions", "popovershow", $('solutionhelpText'));
+}
+
+function setPopoverSubstrate() {
+    jQuery('#isOnSubstratePopup').val('-1');
+}
+
+function getSubstrateDetails(substrateid, substratename, helptext) {
+    var insubstrate = decodeURIComponent(substratename);
+    insubstrate = String(insubstrate).split('+').join(' ');
+    var inhelp = decodeURIComponent(helptext);
+    inhelp =  String(inhelp).split('+').join(' ');
+    var totalhelp = '<span class="tooltip-demo"><a href="#"  data-placement="top" data-toggle="popover" onclick="setPopoverSubstrate()" id="popOverTopSubstrate" data-html="true" data-content="' + inhelp + '"  data-original-title="" title=""><i  class="icon-info-sign"></i></a></span>';
+    $("substratename").style.display = "block";
+    $("substratename").innerHTML = totalhelp + '&nbsp;' + insubstrate + '&nbsp;';
+    
+    jQuery.ajax({
+        type: 'GET',
+        contentType: "text/xml",
+        url: ROOT + "Home/GetSubstrateDetail?substrateId=" + substrateid,
+        success: function (result) {
+            var str = result;
+            $("cascadeSubstrateDetails").innerHTML = str;
+            var popoverCount = parseInt($('popOverSubstrateCount').value);
+            // preload all the popovers
+            for (var i = 0; i < popoverCount; i++) {
+                try {
+                   // jQuery('#helpTextTip' + String(i)).popover('show');
+                    jQuery('#helpTextTip' + String(i)).popover('hide');
+                }
+                catch (e) { }
+            }
+
+            $("cascadeConditions").innerHTML = '';
+            if (String($('autoShowConditions').value).length > 0) {
+                var splitVal = String($('autoShowConditions').value).split(',');
+                var rebuildVal = String(splitVal[1]);
+                if (splitVal.length > 2) {
+                    for(var i=2;i<splitVal.length;i++){
+                        rebuildVal+=',' + String(splitVal[i]);
+                    }
+                }
+                getConditions(parseInt(splitVal[0]), rebuildVal);
+            }
+            jQuery('.popover-test').popover();
+
+            // popover demo
+            jQuery("a[data-toggle=popover]")
+              .popover()
+              .click(function (e) {
+                  e.preventDefault()
+              })
+        }
+    });
+}
+        
+function getConditions(substratedetailid,substratedetail) {
+    jQuery('#substrateDetailSelected').val(String(substratedetailid));
+    jQuery.ajax({
+        type: 'GET',
+        contentType: "text/xml",
+        url: ROOT + "Home/GetConditions?substrateDetailId=" + substratedetailid + "&substrateDetail=" + encodeURIComponent(substratedetail),
+        success: function (result) {
+            var str = result;
+            $("cascadeConditions").innerHTML = str;
+             
+            if (String($('autoResult').value).length > 0) {
+                setResult(String($('autoResult').value),1);
+            }
+            jQuery('.popover-test').popover();
+
+            // popover demo
+            jQuery("a[data-toggle=popover]")
+              .popover()
+              .click(function (e) {
+                  e.preventDefault()
+              });
+            try {
+                for (var i = 0; i <15; i++) {
+                       // jQuery('#conditionHelpTextTip' + String(i)).popover('show');
+                        jQuery('#conditionHelpTextTip' + String(i)).popover('hide');
+                    }
+            } catch (e) { }
+            // now get the arrow html, plonk it on the page and fade it out if it's included
+            try {
+                var arrowHTML = $('arrowHTML').value;
+                if(arrowHTML.length>0){
+                    $('conditionSelector').style.paddingLeft = '13px';
+                    $('conditionSelector').innerHTML = arrowHTML + "Condition";
+                    jQuery('#showArrow1').fadeOut(500, function () {
+                        $('conditionSelector').style.paddingLeft = '27px';
+                        $('showArrow3').style.display = 'inline';
+                        jQuery('#showArrow2').fadeOut(600, function () {
+                            $('conditionSelector').style.paddingLeft = '41px';
+                            jQuery('#showArrow3').fadeOut(750, function () {
+                                $('conditionSelector').style.paddingLeft = '55px';
+                            });
+                        });
+                    });
+                }
+            }
+            catch (e) { }
+        }
+    });
+    // hide all the popovers
+    hidePopoversSubstrate(1000);
+    runLogger('selectSubstrateDetail', 'selection', 'select', substratedetail);
+}
+
+function handleSuccess(content) {
+    if (content == "OK") {
+        var removeHome = String(window.location).toLowerCase();
+        if (removeHome.indexOf('/home') >= 0) {
+            window.location.replace(ROOT + "Administration/ProjectManagement")
+        }else{
+            window.location.replace("Administration/ProjectManagement");
+        }
+    }
+
+}
+
+function login() {
+    var UserName = $("UserName").value;
+    var Password = $("Password").value;
+    jQuery.ajax({
+        type: 'GET',
+        contentType: "text/xml",
+
+        url: ROOT + "Account/LoginAjax?Login=" + encodeURIComponent(UserName) + "&Password=" + encodeURIComponent(Password),
+        success: function (result) {
+            var str = result;
+            if (str == 'LoginOK') {
+                jQuery('#modalLogin').modal('hide');
+                        
+                var notes = tinyMCE.get('substrateNotes').getContent();
+                var addenda = tinyMCE.get('substrateAddenda').getContent();
+                var reviewerNotes = tinyMCE.get('customReviewerNotes').getContent();
+                notes = cleanTags(notes);
+                addenda = cleanTags(addenda);
+                reviewerNotes = cleanTags(reviewerNotes);
+                var heading = $('specificationHeading').value;
+                var topSolution = $('topSolution').value;
+                var middleSolution = $('middleSolution').value;
+                var bottomSolution = $('bottomSolution').value;
+                var requirementId = $('requirementID').value;
+                var systemArea = $('sysAreaCache').value;
+                var substrateSelected = $('substrateSelectedCache').value;
+                var extraProduct = $('extraProductCache').value;
+                var extraProductResult = $('extraProductResultCache').value;
+                var bottomCategory = $('bottomCategoryCache').value;
+                var middleCategory = $('middleCategoryCache').value;
+                var topCategory = $('topCategoryCache').value;
+                var topResult = $('topResultCache').value;
+                var middleResult = $('middleResultCache').value;
+                var bottomResult = $('bottomResultCache').value;
+                var substrateDetailId= $('substrateDetailCache').value;
+                var conditionId = $('conditionCache').value;
+
+                // create the JSON string and post it back to the server
+                var jsonObj = {
+                    projectNotes: encodeURIComponent(notes),
+                    projectAddenda: encodeURIComponent(addenda),
+                    projectReviewerNotes: encodeURIComponent(reviewerNotes),
+                    projectHeading: heading,
+                    projectTopSolution: topSolution,
+                    projectMiddleSolution: middleSolution,
+                    projectBottomSolution: bottomSolution,
+                    projectRequirementId: requirementId,
+                    projectSystemArea: systemArea,
+                    projectSubstrateSelected: substrateSelected,
+                    projectExtraProduct: extraProduct,
+                    projectBottomCategory: bottomCategory,
+                    projectMiddleCategory: middleCategory,
+                    projectTopCategory: topCategory,
+                    projectTopResult: topResult,
+                    projectMiddleResult: middleResult,
+                    projectBottomResult: bottomResult,
+                    SubstrateDetail: substrateDetailId,
+                    Condition: conditionId
+                };
+
+                jQuery.post(
+                                    ROOT + "Administration/ProjectManagementData",
+                        { processValues: String(JSON.stringify(jsonObj)) },
+                                    handleSuccess
+                        );  
+            }
+                else {          
+                    $('loginFailed').style.display = 'inline';
+            }         
+        }
+    });
+}
+
+function moveToProjects() {
+    var notes = tinyMCE.get('substrateNotes').getContent();
+    var addenda = tinyMCE.get('substrateAddenda').getContent();
+    var reviewerNotes = tinyMCE.get('customReviewerNotes').getContent();
+    notes = cleanTags(notes);
+    addenda = cleanTags(addenda);
+    reviewerNotes = cleanTags(reviewerNotes);
+    var heading = $('specificationHeading').value;
+    var topSolution = $('topSolution').value;
+    var middleSolution = $('middleSolution').value;
+    var bottomSolution = $('bottomSolution').value;
+    var requirementId = $('requirementID').value;
+    var systemArea = $('sysAreaCache').value;
+    var substrateSelected = $('substrateSelectedCache').value;
+    var extraProduct = $('extraProductCache').value;
+    var extraProductResult = $('extraProductResultCache').value;
+    var bottomCategory = $('bottomCategoryCache').value;
+    var middleCategory = $('middleCategoryCache').value;
+    var topCategory = $('topCategoryCache').value;
+    var topResult = $('topResultCache').value;
+    var middleResult = $('middleResultCache').value;
+    var bottomResult = $('bottomResultCache').value;
+    var substrateDetailId = $('substrateDetailCache').value;
+    var conditionId = $('conditionCache').value;
+
+    // create the JSON string and post it back to the server
+    var jsonObj = {
+        projectNotes: encodeURIComponent(notes),
+        projectAddenda: encodeURIComponent(addenda),
+        projectReviewerNotes: encodeURIComponent(reviewerNotes),
+        projectHeading: heading,
+        projectTopSolution: topSolution,
+        projectMiddleSolution: middleSolution,
+        projectBottomSolution: bottomSolution,
+        projectRequirementId: requirementId,
+        projectSystemArea: systemArea,
+        projectSubstrateSelected: substrateSelected,
+        projectExtraProduct: extraProduct,
+        projectBottomCategory: bottomCategory,
+        projectMiddleCategory: middleCategory,
+        projectTopCategory: topCategory,
+        projectTopResult: topResult,
+        projectMiddleResult: middleResult,
+        projectBottomResult: bottomResult,
+        SubstrateDetail: substrateDetailId,
+        Condition: conditionId
+    };
+
+    // save the selection details to a session to enable the application to "remember" this selection
+    // within the application
+    jQuery.post(ROOT + "Administration/ProjectManagementData", { processValues: String(JSON.stringify(jsonObj)) }, handleMoveToProjects);
+}
+
+function handleMoveToProjects(result) {
+    window.location.replace(ROOT + "Administration/ProjectManagement");
+}
+
+function moveToProject() {
+    var notes = tinyMCE.get('substrateNotes').getContent();
+    var addenda = tinyMCE.get('substrateAddenda').getContent();
+    var reviewerNotes = tinyMCE.get('customReviewerNotes').getContent();
+    notes = cleanTags(notes);
+    addenda = cleanTags(addenda);
+    reviewerNotes = cleanTags(reviewerNotes);
+    var heading = $('specificationHeading').value;
+    var topSolution = $('topSolution').value;
+    var middleSolution = $('middleSolution').value;
+    var bottomSolution = $('bottomSolution').value;
+    var requirementId = $('requirementID').value;
+    var systemArea = $('sysAreaCache').value;
+    var substrateSelected = $('substrateSelectedCache').value;
+    var extraProduct = $('extraProductCache').value;
+    var extraProductResult = $('extraProductResultCache').value;
+    var bottomCategory = $('bottomCategoryCache').value;
+    var middleCategory = $('middleCategoryCache').value;
+    var topCategory = $('topCategoryCache').value;
+    var topResult = $('topResultCache').value;
+    var middleResult = $('middleResultCache').value;
+    var bottomResult = $('bottomResultCache').value;
+    var substrateDetailId = $('substrateDetailCache').value;
+    var conditionId = $('conditionCache').value;
+
+    // create the JSON string and post it back to the server
+    var jsonObj = {
+        projectNotes: encodeURIComponent(notes),
+        projectAddenda: encodeURIComponent(addenda),
+        projectReviewerNotes: encodeURIComponent(reviewerNotes),
+        projectHeading: heading,
+        projectTopSolution: topSolution,
+        projectMiddleSolution: middleSolution,
+        projectBottomSolution: bottomSolution,
+        projectRequirementId: requirementId,
+        projectSystemArea: systemArea,
+        projectSubstrateSelected: substrateSelected,
+        projectExtraProduct: extraProduct,
+        projectExtraProductResult: extraProductResult,
+        projectBottomCategory: bottomCategory,
+        projectMiddleCategory: middleCategory,
+        projectTopCategory: topCategory,
+        projectTopResult: topResult,
+        projectMiddleResult: middleResult,
+        projectBottomResult: bottomResult,
+        SubstrateDetail: substrateDetailId,
+        Condition: conditionId
+    };
+
+    // save the selection details to a session to enable the application to "remember" this selection within the application
+    jQuery.post(ROOT + "Administration/ProjectManagementData", { processValues: String(JSON.stringify(jsonObj)) }, handleMoveToProject);
+    runLogger("moveToProject","solutions","moveToProjectManagement",jsonObj);
+}
+
+function handleMoveToProject(result) {
+    window.location.replace(ROOT + "Administration/SelectProject?projectId=0");
+}
+
+function showLoginModal() {
+    var notes = tinyMCE.get('substrateNotes').getContent();
+    var addenda = tinyMCE.get('substrateAddenda').getContent();
+    var reviewerNotes = tinyMCE.get('customReviewerNotes').getContent();
+    notes = cleanTags(notes);
+    addenda = cleanTags(addenda);
+    reviewerNotes = cleanTags(reviewerNotes);
+    var heading = $('specificationHeading').value;
+    var topSolution = $('topSolution').value;
+    var middleSolution = $('middleSolution').value;
+    var bottomSolution = $('bottomSolution').value;
+    var requirementId = $('requirementID').value;
+    var systemArea = $('sysAreaCache').value;
+    var substrateSelected = $('substrateSelectedCache').value;
+    var extraProduct = $('extraProductCache').value;
+    var extraProductResult = $('extraProductResultCache').value;
+    var bottomCategory = $('bottomCategoryCache').value;
+    var middleCategory = $('middleCategoryCache').value;
+    var topCategory = $('topCategoryCache').value;
+    var topResult = $('topResultCache').value;
+    var middleResult = $('middleResultCache').value;
+    var bottomResult = $('bottomResultCache').value;
+    var substrateDetailId = $('substrateDetailCache').value;
+    var conditionId = $('conditionCache').value;
+
+    // create the JSON string and post it back to the server
+    var jsonObj = {
+        projectNotes: encodeURIComponent(notes),
+        projectAddenda: encodeURIComponent(addenda),
+        projectReviewerNotes: encodeURIComponent(reviewerNotes),
+        projectHeading: heading,
+        projectTopSolution: topSolution,
+        projectMiddleSolution: middleSolution,
+        projectBottomSolution: bottomSolution,
+        projectRequirementId: requirementId,
+        projectSystemArea: systemArea,
+        projectSubstrateSelected: substrateSelected,
+        projectExtraProduct: extraProduct,
+        projectExtraProductResult: extraProductResult,
+        projectBottomCategory: bottomCategory,
+        projectMiddleCategory: middleCategory,
+        projectTopCategory: topCategory,
+        projectTopResult: topResult,
+        projectMiddleResult: middleResult,
+        projectBottomResult: bottomResult,
+        SubstrateDetail: substrateDetailId,
+        Condition: conditionId
+    };
+
+    // save the selection details to a session to enable the application to "remember" this selection within the application
+    jQuery.post(ROOT + "Administration/ProjectManagementData", { processValues: String(JSON.stringify(jsonObj)) }, handleModalLoginSuccess);
+}
+
+function handleModalLoginSuccess() {
+    jQuery('#modalLogin').modal('show');
+}
+
+function setSession(savePrint) {
+    if (savePrint == true) { enableSavePrint(); }
+    var pPDF = document.URL;
+
+    if (pPDF.indexOf('Home/') > 0) {
+        pPDF = $('prntPDF').innerHTML;
+        $('prntPDF').innerHTML = pPDF.replace('Home/', '');
+        pPDF = $('prntWord').innerHTML;
+        $('prntWord').innerHTML = pPDF.replace('Home/', '');
+    }
+}
+
+function showPrint() {
+    var notes = tinyMCE.get('substrateNotes').getContent();
+    var addenda = tinyMCE.get('substrateAddenda').getContent();
+    var reviewerNotes = tinyMCE.get('customReviewerNotes').getContent();
+    notes = cleanTags(notes);
+    addenda = cleanTags(addenda);
+    reviewerNotes = cleanTags(reviewerNotes);
+    var heading = $('specificationHeading').value;
+    var topSolution = $('topSolution').value;
+    var middleSolution = $('middleSolution').value;
+    var bottomSolution = $('bottomSolution').value;
+    var requirementId = $('requirementID').value;
+    var systemArea = $('sysAreaCache').value;
+    var substrateSelected = $('substrateSelectedCache').value;
+    var extraProduct = $('extraProductCache').value;
+    var extraProductResult = $('extraProductResultCache').value;
+    var bottomCategory = $('bottomCategoryCache').value;
+    var middleCategory = $('middleCategoryCache').value;
+    var topCategory = $('topCategoryCache').value;
+    var topResult = $('topResultCache').value;
+    var middleResult = $('middleResultCache').value;
+    var bottomResult = $('bottomResultCache').value;
+    var substrateDetailId = $('substrateDetailCache').value;
+    var conditionId = $('conditionCache').value;
+
+    // create the JSON string and post it back to the server
+    var jsonObj = {
+        projectNotes: encodeURIComponent(notes),
+        projectAddenda: encodeURIComponent(addenda),
+        projectReviewerNotes: encodeURIComponent(reviewerNotes),
+        projectHeading: heading,
+        projectTopSolution: topSolution,
+        projectMiddleSolution: middleSolution,
+        projectBottomSolution: bottomSolution,
+        projectRequirementId: requirementId,
+        projectSystemArea: systemArea,
+        projectSubstrateSelected: substrateSelected,
+        projectExtraProduct: extraProduct,
+        projectExtraProductResult: extraProductResult,
+        projectBottomCategory: bottomCategory,
+        projectMiddleCategory: middleCategory,
+        projectTopCategory: topCategory,
+        projectTopResult: topResult,
+        projectMiddleResult: middleResult,
+        projectBottomResult: bottomResult,
+        SubstrateDetail: substrateDetailId,
+        Condition: conditionId
+    };
+
+    // save the selection details to a session to enable the application to "remember" this selection within the application
+    jQuery.post(ROOT + "Administration/ProjectManagementData", { processValues: String(JSON.stringify(jsonObj)) }, goToModal);
+}
+
+function goToModal() {
+    jQuery('#modalPrint').modal('show');
+}
+
+function setResult(result,id) {
+    $('substrate').value = result;
+    inval = encodeURIComponent(result);
+    var area = $('selectedCategory').innerHTML;
+    area = encodeURIComponent(area);
+    var text = '<a id="solutionsButton" data-ajax="true" data-ajax-method="POST"  data-ajax-mode="replace" data-ajax-success="viewSolutions" data-ajax-update="#solutionTable" href="/Home/GetSystemResults?selectedText=' + inval + '&questionid=0&area=' + area + '&isAddOn=false&isAddOnSelected=false&filterArea=false&isFirst=true&loadJS=true" role="button" class="btn btn-large  btn-primary"  style="color:white" >View Solutions</a>';
+
+    $('viewsolutionButton').innerHTML = text;
+    //$('viewsolutionButton').style.display = 'none';
+    //$('viewsolutionButton').style.display = 'block';
+    //$('viewsolutionButton').style.paddingLeft = '50px';
+    //jQuery('#viewsolutionButton').css('z-index', '1000');
+    //jQuery('#viewsolutionButton').css('position', 'fixed');
+    jQuery('#conditionSelected').val(String(id));
+    runLogger("selectSubstrateCondition", "selection", "selection", result);
+}
+
+function runLogger(action, view, paramnames, paramvalues) {
+    
+    jQuery.post(
+            ROOT + "Home/LogUserActivity?action=" + action + "&view=" + view + "&paramnames=" + encodeURIComponent(paramnames) + "&paramvalues=" + encodeURIComponent(paramvalues));
+}
+
+function addNewProject() {
+    var project = encodeURIComponent(jQuery('#projectName').val());
+            
+    jQuery.ajax({
+        type: 'GET',
+        contentType: "text/xml",
+
+        url: ROOT + "Home/AddProduct?projectname=" + project,
+        success: function (result) {
+            var str = result;
+            alert(str);
+        }
+});
+}
+
+function getHPSubstrateDetail(substrateid, elementid, elementhidelist, locationid, locationText) {
+    $('selectedHPSubstrate' + String(substrateid)).innerHTML = locationText + ' ' + $('selectedHPSubstrate' + String(substrateid)).innerHTML;
+    hideElements(substrateid, elementid, elementhidelist,locationid);
+    // get the substratedetail data
+    jQuery.ajax({
+        type: 'GET',
+        url: ROOT + "Home/CacheHPData",
+        success: function (result) {
+            var str = result;
+            $('substrateDetailPickList').innerHTML = str;
+            $('substrateDetailList' + String(substrateid) + String(locationid)).style.display = 'block';
+            // extra formatting required if a large number of substratedetails are available
+           
+            if (parseInt($('substrateDetailCount' + String(substrateid)).value) > 7) {
+                 
+                $('buildSpec').style.height = '1000px';
+            } else {
+                $('buildSpec').style.height = '750px';
+            }
+            // now load and cache the conditions data
+            jQuery.ajax({
+                type: 'GET',
+                url: ROOT + "Home/CacheHPSubstrateConditions?substrateId=" + String(substrateid) + '&locationId=' + String(locationid),
+                success: function (result) {
+                    var str = result;
+                    
+                    $('substrateDetailPickList').innerHTML = str + $('substrateDetailPickList').innerHTML;
+                }
+            });
+        }
+    });
+}
+
+function hideElements(substrateid, elementid, elementhidelist,locationid) {
+    // go through the element hide list 
+    var hideElements = elementhidelist.split('|');
+    for (var i = 0; i < hideElements.length - 1; i++) {
+
+        //alert(hideElements[i]);
+        if (hideElements[i].indexOf('HPButtonDiv') >= 0) {
+            $(hideElements[i]).style.paddingBottom = '0px';
+            if (String(substrateid) != hideElements[i].replace('HPButtonDiv', '')) {
+                if (elementid != hideElements[i]) {
+                    jQuery('#' + hideElements[i]).fadeOut(50);
+                }
+            }
+        } else {
+            if (elementid != hideElements[i]) {
+                jQuery('#' + hideElements[i]).fadeOut(50);
+            }
+        }
+    }
+
+    // get the top position of hte selected element
+    var rect = $(elementid).getBoundingClientRect();
+    //move('#' + elementid).translate(0, -37).ease('out').end();
+    jQuery('#' + elementid).fadeOut(50);
+    jQuery('#selectedHPSubstrate' + String(substrateid)).fadeIn(1000);
+    jQuery('#selectedCategory').fadeOut(10);
+    $('spacerDiv').style.display = 'none';
+}
+
+function getHPLocation(substrateid, elementid, elementhidelist) {
+    hideElements(substrateid, elementid, elementhidelist,0);
+
+    var locationList = $('location' + String(substrateid)).value.split('|');
+    //jQuery('#location' + String(substrateid)).val('');
+    var currentLocation = '';
+    var outputOptions = '';
+    for (var i = 0; i < locationList.length; i++) {
+        // loop through the different locations available and display as an option
+        var locationDetails=locationList[i].split(',');
+        if (currentLocation != locationDetails[2]) {
+            currentLocation = locationDetails[2];
+            outputOptions += '<div class="span12" id="locationOption" style="padding-top:25px"><a class="buttonHP" href="#" style="width:600px;height:65px;font-size:16px;color:white;margin-left:-40px"><span style="width:530px;height:22px;font-size:18px" onclick="getHPSubstrateDetail(' + String(substrateid) + ',\'' + String(elementid) + '\',\'' + String(elementhidelist) + '\',' + String(locationDetails[1]) + ',\'' + currentLocation  + '\')">' + currentLocation + '</span></a></div>';
+        }
+    }
+    $('substrateDetailPickList').innerHTML = outputOptions + $('substrateDetailPickList').innerHTML;
+}
+
+function getHPCondition(substrateDetailId, substrateid,locationid) {
+    var hideElements = $('substrateDetailIDS' + String(substrateid)).value.split(',');
+    $('buildSpec').style.height = '750px';
+    for (var i = 0; i <= hideElements.length - 1; i++) {
+        $('substrateButtonLine' + hideElements[i]).style.display = 'none';
+    }
+
+    $('substrateDetailSelected' + String(substrateDetailId) + String(locationid)).style.display = 'block';
+    $('substrateDetailSelected' + String(substrateDetailId) + String(locationid)).style.paddingBottom = '30px';
+    // get the cached conditions and find and present the relevant options. If there's only one we just "auto-select" for that
+    var counter = 0;
+    // first split by pipe to get all the different conditions
+    var conditionList = $('cachedConditions').value.split('|');
+    var questionText = 'Please select the condition....';
+    var questionAndAnswer = "<div class='span12' id='conditionquestion' style='text-align:center'><p id='conditionSelectionText' class='lead'>" + questionText + "</p></div>";
+    var conditionButtons = new Array();
+    // first loop through the array to get the count - need to do this at will impact formatting on the page
+    for (var i = 0; i < conditionList.length; i++) {
+        // check for match on substratedetailid
+        var conditionDetail = conditionList[i].split(',');
+        if (parseInt(conditionDetail[0]) == parseInt(substrateDetailId)) {
+            counter++;
+        }
+    }
+    var buttonCount=0;
+    for(var i=0; i<conditionList.length; i++){
+        // then split by comma to get all the different condition level detail
+        var conditionDetail=conditionList[i].split(',');
+        // first check for a match on substratedetailid
+        if (parseInt(conditionDetail[0]) == parseInt(substrateDetailId)) {
+            // then get the condition details and build up the question and answer html
+            // only to be displayed when the counter>1 - otherwise autoselect
+            if (counter > 1) {
+                if (counter > 2) {
+//                    conditionButtons.push('<div class="span3" style="max-width:360px;max-height:200px;margin-left:-50px"><div class="round-button" style="cursor:pointer;width:40%"><div class="round-button-circle" id="ConditionAnswer' + String(buttonCount) + '"><p onclick="selectCondition(' + conditionDetail[0] + ',' + conditionDetail[1] + ',' + String(buttonCount) + ',' + locationid + ',\'' + conditionDetail[2] + '\')" class="round-button">' + conditionDetail[2] + '</p></div></div></div>');
+                    conditionButtons.push('<div class="span3" style="max-width:360px;max-height:200px;margin-left:-34px"><div   style="cursor:pointer;width:40%"><a href="#" class="buttonHP" style="width:160px;height:75px;font-size:16px;color:white;"><span  style="width:95px;height:32px;font-size:16px" onclick="selectCondition(' + conditionDetail[0] + ',' + conditionDetail[1] + ',' + String(buttonCount) + ',' + locationid + ',\'' + conditionDetail[2] + '\')">' + conditionDetail[2] + '</span></a></div></div>');
+                } else {
+                    //conditionButtons.push('<div class="span4" style="max-width:360px;max-height:200px;margin-left:-50px"><div class="round-button" style="cursor:pointer;width:40%"><div class="round-button-circle" id="ConditionAnswer' + String(buttonCount) + '"><p onclick="selectCondition(' + conditionDetail[0] + ',' + conditionDetail[1] + ',' + String(buttonCount) + ',' + locationid + ',\'' + conditionDetail[2] + '\')" class="round-button">' + conditionDetail[2] + '</p></div></div></div>');
+                    if (i > 0) {
+                        conditionButtons.push('<div class="span4" style="max-width:180px;max-height:200px;margin-left:-34px"><div  style="cursor:pointer;width:40%"><a href="#" class="buttonHP" style="width:160px;height:75px;font-size:16px;color:white;"><span style="width:95px;height:32px;font-size:16px" onclick="selectCondition(' + conditionDetail[0] + ',' + conditionDetail[1] + ',' + String(buttonCount) + ',' + locationid + ',\'' + conditionDetail[2] + '\')">' + conditionDetail[2] + '</span></a></div></div>');
+                    } else {
+                        conditionButtons.push('<div class="span4" style="max-width:360px;max-height:200px;margin-left:-34px"><div  style="cursor:pointer;width:40%"><a href="#" class="buttonHP" style="width:160px;height:75px;font-size:16px;color:white;"><span style="width:95px;height:32px;font-size:16px" onclick="selectCondition(' + conditionDetail[0] + ',' + conditionDetail[1] + ',' + String(buttonCount) + ',' + locationid + ',\'' + conditionDetail[2] + '\')">' + conditionDetail[2] + '</span></a></div></div>');
+                    }
+                }
+            } else {
+                $('substrateDetailSelected' + String(substrateDetailId)).innerHTML = conditionDetail[2] + $('substrateDetailSelected' + String(substrateDetailId)).innerHTML;
+            }
+            buttonCount++;
+        }
+    }
+    
+    $('firstQuestion').innerHTML = questionAndAnswer + formatQuestionAndAnswers(conditionButtons, counter, questionText.length);
+    $('conditionquestion').innerHTML = $('conditionquestion').innerHTML + '<canvas id="conditionCanvas" style="max-height:40px;width:350px"></canvas>';
+    $('firstQuestion').style.display = 'block';
+    if (counter == 2) {
+        drawLinesHorizontal(0, 60, 400, 60, 'conditionCanvas');
+        drawLinesHorizontal(0, 260, 400, 260, 'conditionCanvas');
+
+    } else {
+        if (counter == 3) {
+            drawLinesHorizontal(0, 20, 400, 20, 'conditionCanvas');
+            drawLinesHorizontal(0, 160, 400, 160, 'conditionCanvas');
+            drawLinesHorizontal(0, 300, 400, 300, 'conditionCanvas');
+        }
+    }
+    //CacheHPQuestions
+    jQuery.ajax({
+        type: 'GET',
+        url: ROOT + "Home/CacheHPQuestions?substrateDetailId=" + String(substrateDetailId),
+        success: function (result) {
+            var str = result;
+            $('substrateDetailPickList').innerHTML = str + $('substrateDetailPickList').innerHTML;
+        }
+    });
+}
+
+function selectCondition(substrateDetailId, conditionId,selectedButton,locationid,conditionText) {
+    $('selectedDetailParagraph' + String(substrateDetailId)).innerHTML = '<input type="hidden" id="resultContent" value="" /><input type="hidden" id="previousAnswer" value="" />' + conditionText + ' ' + $('selectedDetailParagraph' + String(substrateDetailId)).innerHTML;
+    jQuery('#firstQuestion').fadeOut(100);
+        
+    var questionList = $('cachedQuestionsAnswers').value.split('|');
+    var questionText = '';
+    var answerText = '';
+    for (var i = 0; i < questionList.length - 1; i++) {
+        var question = questionList[i].split("','");
+        // check the substratedetailid and conditionid. If they match we need to display the question and answers
+        if (parseInt(question[1]) == parseInt(substrateDetailId) && parseInt(question[2]) == parseInt(conditionId) && question[0].toLowerCase() == 'true') {
+            if (questionText.length < 1) {
+                questionText = "<div class='span12' id='question1' style='align-content:center'><p class='lead'>" + question[4] + "</p></div>"; // <canvas id='question1Canvas' style='max-height:40px;width:400px'></canvas>
+            }
+            // define the javascript call - format is answer text, to requirementid, next question id, question number, answer Id - in the first instance will always be set to zero
+            var onClick = ' onclick="selectQuestionResult(\'' + question[6] + '\',' + question[8] + ',' + question[9] + ',2,0)" ';
+            // if the next questionid is empty we need to cache the solution results
+            if (parseInt(question[9]) <= 0) {
+                jQuery.ajax({
+                    type: 'GET',
+                    url: ROOT + "Home/GetHPResult?RequirementId=" + String(question[8]),
+                    success: function (result) {
+                        var str = result;
+                        jQuery('#resultContent').val($('resultContent').value + str + '|');
+                    }
+                });
+            }
+            answerText += "<div class='span12' style='padding-top:5px'><a class='buttonHP' href='#' style='width:360px;height:65px;font-size:16px;color:white;'><span " + onClick + " style='width:300px;height:24px;font-size:16px'>" + question[6] + "</span></a></div>";
+        }
+    }
+        
+    $('conditionSelectionText').style.color = "#C0C0C0";
+    // wrap in a div called "Question" with the question number appended so we can toggle the visibilty
+    $('questionDiv').innerHTML = questionText + "<div id='Question2'>" + answerText + "</div>";
+    jQuery('#questionDiv').fadeIn(350);
+    $('substrateDetailSelected' + String(substrateDetailId) + String(locationid)).style.paddingBottom = "5px";
+}
+
+function selectQuestionResult(inText, requirementId, questionId, questionNumber,answerId) {
+    jQuery('#Question' + String(questionNumber)).fadeOut(100);
+    var previousAnswerText = $('previousAnswer').value + "<canvas id='question" + String(questionNumber) + "Canvas' style='max-height:40px;width:100%'></canvas><p id='answerText" + questionNumber + "' class='lead' style='display:inline;margin-left:20px;position: relative;margin-left: -22px; margin-right: -22px; padding: 15px;background: #e5e5e5;background: linear-gradient(#f5f5f5, #e5e5e5);box-shadow: 0 -1px 0 rgba(255,255,255,.8 inset;text-shadow: 0 1px 0 #fff;'>" + inText + "</p><br><br><div class='span12'></div>";
+
+    if (parseInt(questionId) > 0) {
+        var questionList = $('cachedQuestionsAnswers').value.split('|');
+        var questionText = '';
+        var answerText = '';
+        for (var i = 0; i < questionList.length - 1; i++) {
+            var question = questionList[i].split("','");
+            // check the substratedetailid and conditionid. If they match we need to display the question and answers
+            if (parseInt(question[3]) == parseInt(questionId)) {
+                if (questionText.length < 1) {
+                    questionText = "<div class='span12' id='question"  + questionNumber + "' style='align-content:center'><p class='lead'>" + question[4] + "</p></div>"; // <canvas id='question1Canvas' style='max-height:40px;width:400px'></canvas>
+                }
+
+                // if the next questionid is empty we need to cache the solution results
+                if (parseInt(question[9]) <= 0) {
+                    jQuery.ajax({
+                        type: 'GET',
+                        url: ROOT + "Home/GetHPResult?RequirementId=" + String(question[8]),
+                        success: function (result) {
+                            var str = result;
+                            jQuery('#resultContent').val($('resultContent').value + str + '|');
+                        }
+                    });
+                }
+                // define the javascript call - format is answer text, to requirementid, next question id, question number
+                
+                var onClick = ' onclick="selectQuestionResult(\'' + question[6] + '\',' + question[8] + ',' + question[9] + ',' + String(parseInt(questionNumber) + 1) + ','+ question[5] + ')" ';
+                answerText += "<div class='span12' style='padding-top:5px'><a class='buttonHP' href='#' style='width:360px;height:65px;font-size:16px;color:white;'><span " + onClick + " style='width:300px;height:24px;font-size:16px'>" + question[6] + "</span></a></div>";
+            }
+        }
+        $('conditionSelectionText').style.color = "#C0C0C0";
+        // wrap in a div called "Question" with the question number appended so we can toggle the visibilty
+        $('questionDiv').innerHTML = previousAnswerText +  "<div id='Question" + String(parseInt(questionNumber) + 1) + "'>" + questionText  + answerText + "</div>";
+    } else {
+        // get the recommended solution if we're at the bottom of the decision tree
+        var resultList = $('resultContent').value.substr(0, $('resultContent').value.length - 1).split('|');
+        var resultContent = '';
+
+        for (var i = 0; i < resultList.length; i++) {
+            var result = resultList[i].split('","');
+            if(result.length>2){
+                if (parseInt(result[1].replaceAll('"', '')) == requirementId && parseInt(result[0].replaceAll('"', '')) == answerId) {
+                // if the requirement IDs match, output the result
+                    resultContent = result[2].replaceAll('"', '');
+                }
+            }
+        }
+        $('questionDiv').innerHTML = previousAnswerText + resultContent;
+        // get the final outcome and display the result
+    }
+    jQuery('#previousAnswer').val(previousAnswerText);
+    for (var i = 2; i <= questionNumber; i++) {
+        drawLinesHorizontal(0, 150, 100, 150, "question" + String(i) + "Canvas");
+    }
+}
+
+function disableNonSelectedButtons(buttonid) {
+    try {
+        $('ConditionAnswer' + String(buttonid)).style.backgroundColor = "#C0C0C0";
+    } catch (e) { }
+}
+
+function formatQuestionAndAnswers(buttonArray, answerCount,questionLength) {
+    var output = "";
+    if (answerCount > 3) {
+        // vertical question and answer alignment where more than 3 answers are given
+    } else {
+        // horizontal question and answer alignment where 3 or under answers are given
+        if (answerCount <= 2) {
+            output = '<div class="span2" style="width:22%"></div>';
+            if (answerCount < 2) {
+                output += buttonArray[0];
+            } else {
+               
+                output += buttonArray[0] + buttonArray[1];
+            }
+            output += '<div class="span2"  style="width:22%"></div>';
+        } else {
+            output = '<div class="span2"></div>';
+            output += buttonArray[0] + buttonArray[1] + buttonArray[2];
+            output += '<div class="span2"></div>';
+        }
+    }
+    return output;
+}
+
+function moveToHP() {
+   comingSoon();
+    //jQuery.ajax({
+    //    type: 'POST',
+    //    cache: false,
+    //    url: ROOT + "Home/GetHPContent",
+    //    success: function (result) {
+    //        var str = result;
+    //        $('panelHolder').innerHTML = str;
+    //    }
+    //});
+    //$('searchLabel').style.display = 'none';
+    //$('viewsolutionButton').style.display = 'none';
+    //$('substrate').type = "hidden";
+    //$('banner').style.width = "75%";
+    //$('banner').innerHTML = '<a href="/Home/Home" style="max-width:600px;width:600px;font-family:JamesPaul;font-size:48px;color:white"><img src="/Content/images/ReseneHeader_rgb_small.jpg" height="100px" width="250px" alt="">High Performance Coatings</a>';
+    //$('selectedCategory').style.display = "none";
+}
+
+function comingSoon() {
+    // highlight "coming soon" text for high performance
+    if ($('onThumbnails').value == '') {
+        jQuery('#comingSoonText').css('font-size', '14px');
+        $('comingSoonText').innerHTML = "<strong>Coming soon...<strong>";
+        setTimeout(function () {
+            $('comingSoonText').innerHTML = "Coming soon...";
+            jQuery('#comingSoonText').css('font-size', '12px');
+        }, 500);
+    }
+}
+
+// Drawing functions
+function drawLinesHorizontal(fromvertical,fromhoriztonal,tovertical,tohorizontal,canvas) {
+    // draw a line between the buttons
+    //var c = document.getElementById(canvas);
+    //var rect = c.getBoundingClientRect();
+    //var ctx = c.getContext("2d");
+    //ctx.beginPath();
+    //ctx.moveTo(fromhoriztonal,fromvertical);
+    //ctx.lineTo(tohorizontal,tovertical);
+    //ctx.stroke();
+    
+}
+// End of drawing functions
+
+// End of drawing functions
+function movePanel(numberOfSubstrates, row, substrateId, substratename, helptext) {
+    jQuery('#substrate').val('');
+    jQuery('#hasAutoTyped').val('secondscreen');
+    // move the panels and resize based on what's been entered - only panels 1-7
+
+    var numberOfColumns = 2; // use this variable to add more columns. It is also necessary to update the for loop to accomodate more than two columns
+    var numberOfImagesOfFirstColumn = Math.ceil(numberOfSubstrates / numberOfColumns);
+    
+    var top = 85;
+    var left = -5;
+    var topOffset = 83;
+    var leftOffset = 100;
+    var substrateTop = '0px';
+    var substrateLeft = '0px';
+
+    jQuery('#panelDiv0').css('position', 'relative');
+    jQuery('#panelDiv0').css('top', '-114px');
+    jQuery('#panelDiv0').css('left', '-66px');
+    jQuery('#panelDiv0').css('padding-top', '0px'); //To avoid the column blocking Home button
+
+    for (var index = 0; index < numberOfSubstrates; index++) {
+        if (index < numberOfImagesOfFirstColumn) {
+            substrateTop = top + (topOffset * index) + 'px';
+            substrateLeft = left + 'px';
+        }
+        else {
+            substrateTop = top + (topOffset * (index - numberOfImagesOfFirstColumn)) + 'px';
+            substrateLeft = left + leftOffset+ 'px';
+        }
+        
+        jQuery('#panelImage' + String(index)).css('padding-bottom', '1px');
+        jQuery('#panelImage' + String(index)).css('position', 'absolute');
+        jQuery('#panelImage' + String(index)).css('top', substrateTop);
+        jQuery('#panelImage' + String(index)).css('left', substrateLeft);
+    }
+    
+    jQuery('#imageHeadSpacer').css('height', '0px');
+    jQuery('#imageHeadSpacer').css('background-color', 'white');
+    jQuery('#comingSoonText').css('width', '75px');
+    jQuery('#comingSoonText').css('font-size', '8px');
+
+    //Hide Search label and text field while loading the second page and move View Solutions button to the left
+    jQuery('#searchLabel').css('display', 'none');    
+    jQuery('#substrate').css('display', 'none');
+    jQuery('#ViewSolutionButtonlocation').css('margin-left', '280px');
+    jQuery('#ViewSolutionButtonlocation').css('padding-top', '0px');
+    
+    for (var i = 0; i < numberOfSubstrates; i++) {
+        if (row == i) {
+            jQuery('#substrateHeaderText' + String(i)).css('font-size', '11px');
+            jQuery('#substrateHeaderText' + String(i)).css('font-weight', 'bold');
+            jQuery('#substrateHeaderText' + String(i)).css('color', 'black');
+            jQuery('#panelImageReference' + String(i)).css('height', '38px');
+            jQuery('#panelImageReference' + String(i)).css('border', '2px solid red');
+            jQuery('#panelImageReference' + String(i)).css('width', '80px');
+        } else {
+            jQuery('#substrateHeaderText' + String(i)).css('font-size', '11px');
+            jQuery('#substrateHeaderText' + String(i)).css('color', 'gray');
+            jQuery('#panelImageReference' + String(i)).css('height', '38px');
+            jQuery('#substrateHeaderText' + String(i)).css('font-weight', 'normal');
+            jQuery('#panelImageReference' + String(i)).css('border', '1px solid black');
+            jQuery('#panelImageReference' + String(i)).css('width', '71px');
+        }
+
+        jQuery('#substrateHeaderText' + String(i)).css('background-color', 'white');
+        jQuery('#substrateHeaderText' + String(i)).css('height', '26px');
+        jQuery('#substrateHeaderText' + String(i)).css('padding-top', '4px');
+    }
+    jQuery('#spacerDiv').css('height', '5px');
+    //jQuery('#substrate').css('width', '80%');
+    jQuery('#substrate').css('width', '100%')
+    // font change for ie8
+    if (document.all && !document.addEventListener) {
+        jQuery('#searchFont').css('font-size', '16px');
+    }
+    
+    if ($('onThumbnails').value == '') {
+        setTimeout(function () {
+        
+        jQuery('#onThumbnails').val('true');
+        
+            var panelHTML = $('panelDiv0').innerHTML;
+            panelHTML = panelHTML.replaceAll('width: 20%', 'width: 100%');
+
+            $('panelDiv0').innerHTML = panelHTML;
+
+            jQuery('#panelDiv0').removeClass("span12");
+            jQuery('#panelDiv0').addClass("span2");
+            if (/Edge\/12./i.test(navigator.userAgent)) {                
+            //    $('panelDiv0').innerHTML = $('panelDiv0').innerHTML + '</div>';
+            }
+            var holderHTML = $('panelHolder').innerHTML;
+
+             // Commented as it was decided to place all images only in panelDiv0  - John 2019-05-14
+            //var holderHTML = $('panelHolder').innerHTML.replaceAll('<div id="panelDiv4" class="span12" style="padding-top:50px">', '');            
+            //holderHTML = holderHTML.replaceAll('<DIV style="PADDING-TOP: 50px" id=panelDiv4 class=span12>');
+            //// only for non ie8       
+            //if (document.addEventListener) {
+            //    holderHTML = holderHTML.trim();
+            //}
+            //holderHTML = holderHTML.replaceAll('<div class="span12" id="panelDiv4" style="padding-top: 50px;">', '');
+            //holderHTML = holderHTML.replaceAll('<div class="span12" id="panelDiv4" style="padding-top:50px">', '');
+            //holderHTML = holderHTML.replaceAll('<div style="padding-top: 50px;" id="panelDiv4" class="span12">', '');
+            //holderHTML = holderHTML.replaceAll('</div><div class="span3" id="panelImage4"', '<div class="span3" id="panelImage4"');
+            //holderHTML = holderHTML.replaceAll('Miscellaneous</DIV></DIV></DIV>', 'Miscellaneous</div></div>');
+            //holderHTML = holderHTML.replaceAll('</div><div style="width: 20%; line-height: 1;" id="panelImage4" class="span3" ', '<div style="width: 20%; line-height: 1;" id="panelImage4" class="span3" ');
+            //// ie8 only
+            //holderHTML = holderHTML.replaceAll('Miscellaneous</div></div></div>', 'Miscellaneous</div></div>');
+            //holderHTML = holderHTML.replaceAll('undefined', '');
+            //// ie 9 check
+            //if (document.all && !window.atob) {
+            //    holderHTML = holderHTML.replaceAll("High Performance</div></div></div>", "High Performance</div></div></div><div id='cascadeSubstrateDetails' class='span8' style='font-size:12px'></div><div id='cascadeConditions' class='span3'></div>");
+            //    holderHTML = holderHTML.replaceAll('width: 20%', 'width: 100%');
+            //    holderHTML = holderHTML.replaceAll('WIDTH: 20%', 'width: 100%');
+            //    $('panelHolder').innerHTML = holderHTML;
+            //} else {
+            //    holderHTML = holderHTML.replaceAll("</div><!--<div", "</div><div id='cascadeSubstrateDetails' class='span8' style='font-size:12px'></div><div id='cascadeConditions' class='span3'></div><!--<div");
+            //    holderHTML = holderHTML.replaceAll("</div><!-- <div", "</div><div id='cascadeSubstrateDetails' class='span8' style='font-size:12px'></div><div id='cascadeConditions' class='span3'></div><!--<div");
+            //}
+
+            holderHTML = holderHTML.replaceAll('width: 20%', 'width: 100%');
+            $('panelHolder').innerHTML = holderHTML;
+            //ie8 only
+            if (document.all && !document.addEventListener) {
+                jQuery('#panelDiv0').css('padding-top', '0px');
+                jQuery('#searchFont').css('font-size', '16px');
+            }
+            setTimeout(function () {
+                getSubstrateDetails(substrateId, substratename, helptext);
+            }, 100);
+        }, 100);
+    }
+    else {
+        getSubstrateDetails(substrateId, substratename, helptext);
+    }
+}
+
+function HandleAltHyperlink(altHyperlink) { // Called from Home/Substrate page (with large image buttons) if the AltHyperlink is defined in the Substrates table.
+        window.open(altHyperlink, "_blank");
+}

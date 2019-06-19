@@ -1,0 +1,12 @@
+POST /Account/Login HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Referer: https://www.resenetechspec.com/Account/Login
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Accept: */*
+Connection: Keep-Alive
+Host: www.resenetechspec.com
+Cookie: ASP.NET_SessionId=itcaj4uvwk3ed3covynooosc; __RequestVerificationToken=F5-E5uh9KNTkJMVmUJJ46kBP5xq_JtaX8myqp8d2sg3c3ew2142f4YDKTUaTDnKcxxKenfZ4Z11l2Vywd_vsDZWxsqumDtmg6WDEY1T_u2c1
+Content-Length: 194
+

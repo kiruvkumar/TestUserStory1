@@ -1,0 +1,16 @@
+HTTP/2.0 200
+Status: 200
+content-type: text/html; charset=UTF-8
+p3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+x-content-type-options: nosniff
+content-encoding: gzip
+date: Tue, 18 Jun 2019 22:51:27 GMT
+server: HTTP server (unknown)
+cache-control: private
+content-length: 215
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+expires: Tue, 18 Jun 2019 22:51:27 GMT
+set-cookie: NID=186=RxNy0Sv9N6h3OxftK3DmzgcZzU-STRJuFD4jCzTZGQ0NjCKZPlH2RqlMN7GPANavhUiKGRmbpQIwDKdi2s-a490jUDOWxNsRn5dLF3m1kI-KUaisUFBB8_vSKIBOBmqkSazFvQDTQ2s_qLFN2YkCFLsehpDQS1WJV7u04EWdmnA; expires=Wed, 18-Dec-2019 22:51:27 GMT; path=/; domain=.google.com; HttpOnly
+alt-svc: quic=":443"; ma=2592000; v="46,44,43,39"
+

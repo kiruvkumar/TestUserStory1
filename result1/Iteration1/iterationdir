@@ -1,0 +1,6 @@
+[vuser_init]
+SnapshotIndex=I1_vuser_init
+[TestUserStory1_Login]
+SnapshotIndex=I1_TestUserStory1_Login
+[vuser_end]
+SnapshotIndex=I1_vuser_end

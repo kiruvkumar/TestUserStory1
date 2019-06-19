@@ -1,0 +1,85 @@
+[
+    {
+        "actionName": "TestUserStory1_Login",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: {url}",
+                "infFile": "t1.inf",
+                "time": 1560898286294
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Custom Request: SetGAClientID",
+                "infFile": "t2.inf",
+                "time": 1560898286613
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Url: Login",
+                "infFile": "t3.inf",
+                "time": 1560898287113
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Custom Request: login",
+                "infFile": "t4.inf",
+                "time": 1560898288135
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Submit Data: Login_2",
+                "infFile": "t5.inf",
+                "time": 1560898288969
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Custom Request: SetGAClientID_2",
+                "infFile": "t6.inf",
+                "time": 1560898289222
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Submit Data: LogOff",
+                "infFile": "t7.inf",
+                "time": 1560898289755
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Custom Request: SetGAClientID_3",
+                "infFile": "t8.inf",
+                "time": 1560898290155
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TestUserStory1_01_LauchUrl",
+                "rawStartTime": 1560898282624,
+                "rawEndTime": 1560898286623,
+                "thinkTime": 0.0,
+                "wastedTime": 0.700122594833374
+            },
+            {
+                "transactionName": "TestUserStory1_02_Click_Login",
+                "rawStartTime": 1560898286702,
+                "rawEndTime": 1560898287128,
+                "thinkTime": 0.0,
+                "wastedTime": 0.12698912620544434
+            },
+            {
+                "transactionName": "TestUserStory1_03_EnterCredentials_ClickSignin",
+                "rawStartTime": 1560898287175,
+                "rawEndTime": 1560898289238,
+                "thinkTime": 0.0,
+                "wastedTime": 0.5209171772003174
+            },
+            {
+                "transactionName": "TestUserStory1_04_LogOff",
+                "rawStartTime": 1560898289269,
+                "rawEndTime": 1560898290160,
+                "thinkTime": 0.0,
+                "wastedTime": 0.1986396312713623
+            }
+        ]
+    }
+]

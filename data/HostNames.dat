@@ -1,0 +1,15 @@
+[hosts]
+www.googleapis.com=
+clientservices.googleapis.com=
+accounts.google.com=
+www.resenetechspec.com=
+cdnjs.cloudflare.com=
+oauthaccountmanager.googleapis.com=
+cdn.datatables.net=
+techspecstorage.blob.core.windows.net=
+fonts.googleapis.com=
+www.google-analytics.com=
+ssl.gstatic.com=
+clients1.google.com=
+clients2.google.com=
+sb-ssl.google.com=

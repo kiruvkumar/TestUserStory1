@@ -1,0 +1,13 @@
+[t7]
+FileName1=t7_userinfo.json
+URL1=https://www.googleapis.com/oauth2/v1/userinfo
+Total=2
+ContentType=application/json
+SnapshotXmlFile=snapshot_7.xml
+RequestHeaderFile=t7_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t7_ResponseHeader.txt
+FileName2=t7_bootstrap.css
+URL2=https://www.resenetechspec.com/Content/Bootstrap/css/bootstrap.css
+[ProtocolInfo]
+ProtocolId=QTWeb

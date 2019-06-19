@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Log in - Resene TechSpec System</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/css/froala_editor.pkgd.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/css/froala_style.min.css" />
+
+    <link href="/Content/Bootstrap/css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="/Content/Bootstrap/css/bootstrap-toggle.css" rel="stylesheet"/>
+
+
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/autofill/2.2.2/css/autoFill.dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.3/css/rowReorder.dataTables.min.css" />
+
+    <link href="/Content/site.css?ver=1" rel="stylesheet"/>
+
+    <script src="/Scripts/jquery-3.3.1.min.js"></script>
+
+    <script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script src="/Scripts/jquery.validate.min.js"></script>
+
+    <script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="/Scripts/custom.js"></script>
+
+    <script src="/Scripts/tinymce/tinymce.min.js"></script>
+
+    <script src="/Scripts/jQueryFileDownload.js"></script>
+
+    <script src="/Scripts/jquery.js"></script>
+
+    <script src="/Scripts/jquery-ui.min.js"></script>
+
+
+    
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/autofill/2.2.2/js/dataTables.autoFill.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.3/js/dataTables.rowReorder.min.js"></script>
+
+    <script src="/Scripts/moment.min.js"></script>
+
+    <script src="/Content/Bootstrap/js/bootstrap-tooltip.js"></script>
+
+    <script src="/Content/Bootstrap/js/bootstrap.js"></script>
+
+    <script src="/Content/Bootstrap/js/bootstrap-toggle.min.js"></script>
+
+    <script src="/Scripts/jquery.truncate.min.js"></script>
+
+    <script src="/Scripts/knockout-3.4.2.js"></script>
+
+    <script src="/Scripts/knockout.mapping-latest.js"></script>
+
+    <script src="/Scripts/jquery-ui-touch-punch.min.js"></script>
+
+    <script src="/Scripts/froala-editor/js/froala_editor.pkgd.min.js"></script>
+
+    <link href="/Content/form.css" rel="stylesheet"/>
+
+
+    
+    
+    
+    
+    
+
+    
+    <script src="/Scripts/jquery.validate.min.js"></script>
+
+
+    <script>
+
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function (searchString, position) {
+                position = position || 0;
+                return this.substr(position, searchString.length) === searchString;
+            };
+        }
+
+        // jQuery.noConflict();
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        function hideAllPopovers() {
+            try {
+                if (String($('isOnResultPopup').value).length < 1) {
+                    try {
+                        var previousRow = $('popOverCurrentResultId').value;
+                        jQuery('#popOverCurrentResultId').val('');
+                        if (previousRow != '') {
+                            jQuery('#helpTextTipResults' + String(previousRow)).popover('hide');
+                        }
+                    }
+                    catch (e) { }
+                    try {
+                        jQuery('#scmPopover').popover('hide');
+                    }
+                    catch (e) { }
+                    jQuery('#isOnResultPopup').val('');
+                }
+                else {
+                    jQuery('#isOnResultPopup').val('');
+                }
+            }
+            catch (e) { }
+            hideSubstratePopovers();
+        }
+
+        function hideSubstratePopovers() {
+            if (String($('isOnSubstratePopup').value).length > 0) {
+                if (String($('isOnSubstratePopup').value).substr(0, 1) == 'A') {
+                    var rCount = parseInt(String($('isOnSubstratePopup').value).replace('A', ''));
+                    if (rCount < 0) {
+                        jQuery('#popOverTopSubstrate').popover('hide');
+                        for (var i = 0; i < 10; i++) {
+                            try {
+                                jQuery('#conditionHelpTextTip' + String(i)).popover('hide');
+                            }
+                            catch (e) { }
+                        }
+                        for (var i = 0; i < 25; i++) {
+                            try {
+                                jQuery('#helpTextTip' + String(i)).popover('hide');
+                            }
+                            catch (e) { }
+                        }
+
+                    }
+                    else {
+                        try {
+                            jQuery('#helpTextTip' + String(rCount)).popover('hide');
+                        }
+                        catch (e) { }
+                        try {
+                            jQuery('#conditionHelpTextTip' + String(rCount)).popover('hide');
+                        }
+                        catch (e) { }
+                    }
+                    jQuery('#isOnSubstratePopup').val('');
+                }
+                else {
+                    jQuery('#isOnSubstratePopup').val('A' + $('isOnSubstratePopup').value);
+                }
+            }
+        }
+
+        // custom replace all function
+        String.prototype.replaceAll = function (str1, str2, ignore) {
+            return this.replace(new RegExp(str1.replace(/([\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g, function (c) { return "\\" + c; }), "g" + (ignore ? "i" : "")), str2);
+        };
+
+        // Global func to return the value of a paramater.
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-49289843-1', 'resenetechspec.com');
+        ga('send', 'pageview');
+        ga(function (tracker) {
+
+            var clientId = tracker.get('clientId');
+            jQuery.post(
+                ROOT + "Home/SetGAClientID?id=" + String(clientId));
+        });
+
+        function checkScreenSize() {
+            var myWidth = 0, myHeight = 0;
+            if (typeof (window.innerWidth) == 'number') { //Chrome
+                myWidth = window.innerWidth;
+                myHeight = window.innerHeight;
+            } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+                myWidth = document.documentElement.clientWidth;
+                myHeight = document.documentElement.clientHeight;
+            } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) { //IE9
+                myWidth = document.body.clientWidth;
+                myHeight = document.body.clientHeight;
+            }
+            if (parseInt(myWidth) < 1100 && parseInt(myHeight) < 1950) {
+                // redirect to mobile site - note to check first for the relevant cookie
+            }
+        }
+
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+        
+        checkScreenSize();
+    </script>
+    <style>
+
+        .alert-danger {
+            text-align: left
+        }
+
+        /* Sticky footer styles
+          -------------------------------------------------- */
+
+        htmlbody,
+        body {
+            height: 100%;
+            font-size: 12px;
+            font-family: droid_sansregular,verdana,sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        input,
+        button,
+        select,
+        textarea,
+        .navbar-search {
+            font-family: droid_sansregular,frutiger,verdana,sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* Wrapper for page content to push down footer */
+        #wrap {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            /* Negative indent footer by it's height */
+            margin: 0 auto -280px;
+        }
+
+        /* Set the fixed height of the footer here */
+        #push,
+        #footer {
+            height: 280px;
+        }
+
+        #footer {
+            background-color: #f5f5f5;
+        }
+
+        .span12 {
+            width: 100%;
+        }
+
+        .span11 {
+            width: 95%;
+            background: inherit;
+        }
+
+        .span1 {
+            width: 10%;
+        }
+
+        .spanmanage {
+            width: 28%;
+        }
+
+        .span2 {
+            width: 12%;
+        }
+
+        .span3 {
+            width: 25%;
+        }
+
+        .span4 {
+            width: 35%
+        }
+
+        .span5 {
+            width: 40%;
+        }
+
+        .span6 {
+            width: 45%;
+        }
+
+        .span7 {
+            width: 50%;
+        }
+
+        .span8 {
+            width: 55%;
+        }
+
+        .span9 {
+            width: 60%;
+        }
+
+        .rowPadding {
+            padding-top: 100px;
+        }
+
+        /*Custom tooltip styling-*/
+        div[class="tooltip-inner"] {
+            max-width: 350px;
+            font-size: 14px;
+            background-color: black;
+            color: white;
+        }
+
+        thead th {
+            background-color: #CCCCCC;
+        }
+
+        .styled-select select {
+            background: transparent;
+            width: 268px;
+            padding: 5px;
+            font-size: 16px;
+            line-height: 1;
+            border: 0;
+            border-radius: 0;
+            height: 34px;
+            -webkit-appearance: none;
+        }
+
+        .popover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1010;
+            display: none;
+            max-width: 660px;
+            width: auto;
+            font-size: 12px;
+            padding: 1px;
+            text-align: justify;
+            text-justify: auto;
+            white-space: normal;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .notbold {
+            font-weight: normal;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+                <div id="banner" align="left" style="height:62%;width:26%;padding-left:1em;">
+                    <a href="/Home/Home"><img src="/Content/images/ReseneHeader_rgb_small.jpg" alt="" /></a>
+                </div>
+            <br />
+
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li id="homeLink"><a href="/Home/Home">Home</a></li>
+                        <li><a href="/Account/Login" id="loginLink">Log in</a></li>
+                        <li><a href="/Account/Register" id="registerLink">Register</a></li>
+                    <!--<li><a href="/Home/Contact">Contact</a></li>-->
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div id="mainDisplayDiv" onclick="hideAllPopovers()" style="height:auto;min-height:675px; background-color: white; position: relative;">
+            <div id="overlay" style="display:none"></div>
+            <input id="hasAutoTyped" value="" type="hidden" />
+            <input id="isOnResultPopup" type="hidden" value="" /><input id="isOnSubstratePopup" type="hidden" value="" />
+            <!--<div id="main"> </div>-->
+            <div class="span12" id="body" style="margin-left:0px;width:100%;background-color:white">
+                    <div class="span12" style="height:20px"></div>
+                <div align="center" id="working" style="display:none"><img src="/Content/images/working.gif" /></div>
+
+                
+<script>
+    function checkEmail(email) {
+        var result = validateEmail(email);
+        if (result == false) {
+            alert("Invalid email address, please try again.");
+        }
+        return result;
+    }
+
+    function sendEmail() {
+        var email = $('reminderEmail').value;
+        if (checkEmail(email)) {
+           
+            $('workingEmailGif').style.display = 'inline';
+
+            var ROOT = '/';
+
+            jQuery.ajax({
+                type: 'GET',
+                contentType: "text/xml",
+                url: ROOT + "Account/SendReminder?email=" +  encodeURIComponent(email),
+            success: function (result) {
+                //success code here
+                $('sendSuccess').style.display = 'inline';
+                $('basicForm').style.display = 'none';
+                $('workingEmailGif').style.display = 'none';
+
+                
+                 },
+                error: function () {
+                // error code here
+                    $('workingEmailGif').style.display = 'none';
+
+                    
+                }
+             });
+
+        }
+    }
+</script>
+
+
+
+
+
+<div class="span12"  id="resultgroup"  align="center"> 
+    
+    <h2>Log in to your Resene TechSpec Account.</h2>
+<form action="/Account/Login" method="post"><input name="__RequestVerificationToken" type="hidden" value="MjhkFFlQE_al7NUzEVw79VRN0UvdUIX4F6oKvgv-o4_pRfwYK36NbCNqEskZINvTAHuJk1bC8xWlmXyJ4AiuaXbSghqEH1jW9zHFWbeXej41" />        <fieldset>
+            <div class="span11">
+            
+                 <div class="span4" align="right"><label for="UserName">User ID:</label></div>
+                 <div class="span3" align="left"><input autocomplete="off" data-val="true" data-val-required="The User ID: field is required." id="UserName" name="UserName" style="width:206px" type="text" value="" /></div>
+                 <div class="span3" align="left"> <span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span></div>
+           
+            </div><div class="span11">
+            
+                   <div class="span4" align="right"><label for="Password">Password:</label></div>
+                   <div class="span3" align="left"> <input autocomplete="off" data-val="true" data-val-required="The Password: field is required." id="Password" name="Password" type="password" /></div>
+                   <div class="span3" align="left"> <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span></div>
+            
+            </div><div class="span11">
+                      <div class="span4" align="right"></div>
+                      <div class="span1" style="width:5px" align="left"><input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" /></div><div class="span4" style="text-align:left;padding-top:2px"><label class="checkbox" for="RememberMe">Remember me?</label></div>
+
+                      </div>
+            <div class="rowPadding">
+                <div class="span12"></div>
+            </div>
+            <div class="span11">
+                <div class="span4"></div>
+                <div class="span2">
+                    <input type="submit" class="btn btn-large btn-block btn-primary" value="Log in" />
+                </div>
+                <div class="span5"></div>
+            </div>
+        </fieldset>
+         <div id="loginFailed" class="span9" style="display:none"><p class="lead">Login unsuccessful.  Please check login name and password.</p></div>
+    <div class="span11" style="padding-top:20px">
+
+        <div class="span4" align="right"></div>
+        <div class="span4" align="left"> <a href="/Account/Register" style="color: #0A46D6;">Register</a> if you don't have an account.</div>
+        
+    </div>
+    <div class="span11" style="padding-top:10px">
+
+        <div class="span4" align="right"></div>
+        <div class="span4" align="left"><a href="#modalForgetpassword" style="color: #0A46D6; " data-toggle="modal">Click here </a>If you have forgotten your password.</div>
+        
+    </div>
+    <div class="span11" style="padding-top:10px">
+
+        <div class="span4" align="right"></div>
+        <div class="span6" align="left"><a href="#modalTermsConditions" style="color: #0A46D6; " data-toggle="modal">Click here</a> to read our terms and conditions prior to logging in.</div>
+        
+    </div>
+</form></div>
+
+    <div id="modalForgetpassword" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div id="overlay" style="display:none"></div>
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3 id="myModalLabel">Resene TechSpec - Reset Password</h3>
+        </div>
+        <div class="modal-body">
+            <p id="sendSuccess" class="lead" style="display:none">Password reset email sent successfully</p>
+            <div id="basicForm">
+                <p class="lead">Please enter your email and submit for a password reset</p>
+                <p class="lead">
+                    Email: <input id="reminderEmail" /><button onclick="sendEmail()" class="btn">Send</button>
+                </p>
+                
+                <div id="workingEmailGif" style="display:none"><img src="/Content/images/spinworking.gif" /></div>
+            </div>
+        </div>
+        <div id='innerdata'></div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+  <div id="modalTermsConditions" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3 id="myModalLabel1">Resene TechSpec - Terms and Conditions</h3>
+    </div>
+      <div class="modal-body" style="text-align:left;font-size:12px">
+          <p>All data within the Resene TechSpec system is stored securely by Resene Paints Limited.  This site uses cookies to provide custom functionality and these must be allowed by the end user to use the system.</p><p>Resene TechSpec maintains system usage logs to determine site usage, optimise site performance and audit data changes within the site.  Data for specific user and business accounts remains completely confidential for those accounts and is only maintained to provide high-availability and redundancy within the TechSpec system.</p><p>While every effort is made to maintain 100% availability of Resene TechSpec from time-to-time system updates and configuration changes will be necessary to improve reliability and functionality of the system which may lead to temporary down-time of the system while this takes place.  Resene will make every effort to maintain optimal performance of the TechSpec system and will monitor all usage to ensure the application performs in a timely fashion.</p><p>For the full Resene privacy policy please check <a href="http://www.resene.co.nz/Privacy-Policy.htm">here</a>.
+      </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+  </div>
+
+
+                <div class="span12" id="space" style="margin-bottom:20px;"></div>
+            </div>
+        </div>
+
+        <div id="footer" style="height:180px;background-color:white">
+
+            <table class="ContactsContainer" cellspacing="0" cellpadding="0" border="0" style="border-style:none;">
+
+                <tbody>
+                    <tr>
+                        <td class="ContactLeftSide">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3" class="FooterContent"><p><small>In Australia:<br>PO Box 924, Beenleigh, Queensland 4207</small></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="FooterContent">
+                                            <p>
+                                                <small>
+                                                    Phone:<img src="../content/images/spacer.gif" alt=" " height="1" width="10" />
+                                                    1800 738 383<br>Fax: 1800 064 960<br>Email: <a href="http://www.resene.co.nz/colorite/form_au.html" style="color: #0A46D6; ">advice@resene.com.au</a><br /><a href="http://www.resene.com.au" style="color: #0A46D6; ">www.resene.com.au</a>
+                                                </small>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </td>
+                        <td class="ContactMidCell">
+                            <img src="../content/images/resene_logo_footer.gif" alt="Resene Paints Ltd" height="37" width="130" />
+                        </td>
+                        <td class="ContactRightSide">
+                            <table class="center" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3" class="FooterContent"><p><small>In New Zealand:<br>PO Box 38242, Wgtn Mail Centre, Lower Hutt 5045</small></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="FooterContent">
+                                            <p>
+                                                <small>
+                                                    Phone:<img src="../content/images/spacer.gif" alt=" " height="1" width="10" />
+                                                    +64 (4) 577 0500, 0800 RESENE<br>Fax: +64 (4) 577 0600<br>Email: <a href="http://www.resene.co.nz/colorite/form.html" style="color: #0A46D6; ">advice@resene.co.nz</a><br /><a href="http://www.resene.co.nz" style="color: #0A46D6; ">www.resene.co.nz</a>
+                                                </small>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="FooterVision"><p><small>Our vision is to be respected as an ethical and sustainable company and acknowledged as the leading provider of innovative paint and colour technology.  View Resene’s <a href="http://www.resene.co.nz/profile.htm" style="color: #0A46D6; ">profile</a> and <a href="http://www.resene.co.nz/pdf/environmental_policy.pdf" style="color: #0A46D6; ">Environmental Policy</a>.</small></p><br>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align: center;color:#666666;font-size:10px"><p><small>Version 1.16.7103.2025</small></p></div>
+    </div>
+    <script src="/Scripts/move.js"></script>
+
+</body>
+</html>
